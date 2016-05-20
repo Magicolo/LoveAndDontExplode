@@ -46,16 +46,6 @@ namespace Pseudo.EntityFramework
 			return component == null ? null : component.Behaviour;
 		}
 
-		public static bool HasTime(this IEntity entity)
-		{
-			return entity.Has<TimeComponent>();
-		}
-
-		public static TimeChannel GetTime(this IEntity entity)
-		{
-			return entity.Get<TimeComponent>();
-		}
-
 		public static IEntity GetEntity(this Component component)
 		{
 			return EntityUtility.GetEntity(component);
