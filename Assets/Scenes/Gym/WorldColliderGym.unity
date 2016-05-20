@@ -526,6 +526,10 @@ Prefab:
       propertyPath: Frequency
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 156210, guid: a24600beb997dd5449ee79a284729896, type: 2}
+      propertyPath: m_TagString
+      value: Enemis
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a24600beb997dd5449ee79a284729896, type: 2}
   m_IsPrefabParent: 0
@@ -571,6 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990bab72180dd0a4fb4d443ad2990e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UntilRemaingXEnemis: 0
 --- !u!114 &1417352809
 MonoBehaviour:
   m_ObjectHideFlags: 0
