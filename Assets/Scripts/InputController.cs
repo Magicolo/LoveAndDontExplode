@@ -9,23 +9,24 @@ using Pseudo.Injection;
 
 public class InputController : ControllerBase
 {
+	[Header("Uses 'MotionX' and 'MotionY' actions.")]
 	public Players Player;
 	public MotionBase Motion;
 
 	[Inject]
-	IInputManager inputManager;
-	PlayerInput player;
+	IInputManager inputManager = null;
+	PlayerInput input;
 
 	protected override void Start()
 	{
 		base.Start();
 
-		player = inputManager.GetAssignedInput(Player);
+		input = inputManager.GetAssignedInput(Player);
 	}
 
 	void FixedUpdate()
 	{
-		var direction = new Vector2(player.GetAction("MotionX").GetAxis(), player.GetAction("MotionY").GetAxis()).normalized;
+		var direction = new Vector2(input.GetAction("MotionX").GetAxis(), input.GetAction("MotionY").GetAxis()).normalized;
 
 		if (direction != Vector2.zero)
 		{
