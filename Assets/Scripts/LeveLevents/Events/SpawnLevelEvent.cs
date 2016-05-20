@@ -13,14 +13,14 @@ public class SpawnLevelEvent : ILevelEvent
 	Camera Cam;
 
 	[Slider(0, 1)]
-	public float RatioPositionStart;
+	public float RatioXStart;
 
 	public GameObject PrefabToSpawn;
 
 	internal override void Activate()
 	{
 		GameObject go = GameObject.Instantiate(PrefabToSpawn);
-		Vector3 p = Cam.ViewportToWorldPoint(new Vector3(RatioPositionStart, transform.localPosition.y / 100,0));
+		Vector3 p = Cam.ViewportToWorldPoint(new Vector3(RatioXStart, transform.localPosition.y / 100,0));
 		// TODO offsetSelon le sprite;
 		go.transform.position = p;
 	}
