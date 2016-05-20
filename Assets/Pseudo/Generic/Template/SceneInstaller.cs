@@ -5,7 +5,6 @@ using Pseudo;
 using Pseudo.Injection;
 using Pseudo.EntityFramework;
 using Pseudo.Communication;
-using Pseudo.Groupingz;
 
 namespace Pseudo
 {

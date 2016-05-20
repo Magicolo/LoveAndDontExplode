@@ -13,7 +13,7 @@ namespace Pseudo
 {
 	[AddComponentMenu("Pseudo/Physics/Gravity")]
 	[RequireComponent(typeof(TimeComponent))]
-	public class GravityComponent : ComponentBehaviourBase, IGravityChannel
+	public class GravityComponent : PMonoBehaviour, IGravityChannel
 	{
 		public GravityManager.GravityChannels Channel
 		{
@@ -57,13 +57,6 @@ namespace Pseudo
 			cachedRigidbody2D = new Lazy<Rigidbody2D>(GetComponent<Rigidbody2D>);
 		}
 
-		public override void OnAdded()
-		{
-			base.OnAdded();
-
-			gravity.Reset();
-		}
-
 		void Awake()
 		{
 			hasRigidbody = Rigidbody != null;
@@ -76,6 +69,11 @@ namespace Pseudo
 				Rigidbody.velocity += gravity.Gravity * Time.FixedDeltaTime;
 			else if (hasRigidbody2D)
 				Rigidbody2D.velocity += gravity.Gravity2D * Time.FixedDeltaTime;
+		}
+
+		void OnCreated()
+		{
+			gravity.Reset();
 		}
 
 		public static implicit operator GravityChannel(GravityComponent gravity)
