@@ -37,7 +37,7 @@ namespace Pseudo
 		[SerializeField]
 		TimeChannel time = new TimeChannel();
 
-		void OnCreated()
+		void OnCreate()
 		{
 			time.Reset();
 		}
