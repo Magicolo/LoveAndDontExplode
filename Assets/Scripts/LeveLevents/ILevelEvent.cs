@@ -7,5 +7,9 @@ using Pseudo;
 
 public abstract class ILevelEvent : PMonoBehaviour
 {
+
+	protected float LevelHeight { get { return GetComponentInParent<LevelEvents>().LevelHeight; } }
+	protected LevelEvents LevelEvents { get { return GetComponentInParent<LevelEvents>(); } }
+
 	internal abstract void Activate();
 }

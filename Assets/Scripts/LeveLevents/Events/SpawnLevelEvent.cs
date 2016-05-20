@@ -44,7 +44,7 @@ public class SpawnLevelEvent : ILevelEvent
 		float levelHeight = GetComponentInParent<LevelEvents>().LevelHeight;
 		GameObject go = GameObject.Instantiate(PrefabToSpawn);
 		Vector3 p = Cam.ViewportToWorldPoint(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, -Cam.transform.position.z));
-		PDebug.Log(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, 0), p);
+		//PDebug.Log(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, 0), p);
 		// TODO offsetSelon le sprite;
 		go.transform.position = p;
 		nextSpawn = GetComponent<TimeComponent>().Time + SpawnFrequency;
