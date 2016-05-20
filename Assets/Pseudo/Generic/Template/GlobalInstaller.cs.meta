@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 4c7cf2d9decc4954b8e445d188520add
+timeCreated: 1455925081
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - GameManager: {instanceID: 0}
+  - AudioManager: {instanceID: 0}
+  - ParticleManager: {instanceID: 0}
+  - InputManager: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
