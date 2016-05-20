@@ -7,6 +7,7 @@ using Pseudo;
 
 public class Activateable : PMonoBehaviour
 {
+	public SelectorBase Selector;
 	public ActivatorBase Owner
 	{
 		get { return owner; }
@@ -17,6 +18,7 @@ public class Activateable : PMonoBehaviour
 	}
 
 	ActivatorBase owner;
+	int inRangeCounter;
 
 	public bool Activate(ActivatorBase owner)
 	{
@@ -24,6 +26,7 @@ public class Activateable : PMonoBehaviour
 			return false;
 
 		this.owner = owner;
+		UpdateSelector();
 
 		return true;
 	}
@@ -33,9 +36,32 @@ public class Activateable : PMonoBehaviour
 		if (this.owner == owner)
 		{
 			this.owner = null;
+			UpdateSelector();
+
 			return true;
 		}
 
 		return false;
+	}
+
+	public void EnterRange(ActivatorBase activator)
+	{
+		inRangeCounter++;
+		UpdateSelector();
+	}
+
+	public void ExitRange(ActivatorBase activator)
+	{
+		inRangeCounter--;
+		UpdateSelector();
+	}
+
+	void UpdateSelector()
+	{
+		if (Selector != null)
+		{
+			Selector.Showing = inRangeCounter > 0;
+			Selector.InUse = InUse;
+		}
 	}
 }

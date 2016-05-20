@@ -49,10 +49,16 @@ public class InputTriggerActivator : ActivatorBase
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		activateable = collision.GetComponent<Activateable>(HierarchyScopes.Self | HierarchyScopes.Parent);
+
+		if (activateable != null)
+			activateable.EnterRange(this);
 	}
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
 		activateable = collision.GetComponent<Activateable>(HierarchyScopes.Self | HierarchyScopes.Parent);
+
+		if (activateable != null)
+			activateable.ExitRange(this);
 	}
 }
