@@ -23,11 +23,13 @@ public class Motion : MotionBase
 
 	public override void Move(Vector2 motion)
 	{
-		body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
+		if (GetComponent<FreezeMotion>() == null)
+			body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
 	}
 
 	public override void LookAt(float angle)
 	{
-		body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
+		if (GetComponent<FreezeMotion>() == null)
+			body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
 	}
 }
