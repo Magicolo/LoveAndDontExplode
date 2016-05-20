@@ -44,5 +44,6 @@ public class LevelEventActivator : MonoBehaviour
 			Vector3 halfScale = new Vector3(transform.localScale.x / 2, transform.localScale.y / 2, 0);
 			Gizmos.DrawLine(transform.position - halfScale, transform.position + halfScale);
 		}
+
 	}
 }
