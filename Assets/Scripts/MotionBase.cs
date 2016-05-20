@@ -5,4 +5,5 @@ using Pseudo;
 public abstract class MotionBase : PMonoBehaviour
 {
 	public abstract void Move(Vector2 motion);
+	public abstract void LookAt(float angle);
 }
