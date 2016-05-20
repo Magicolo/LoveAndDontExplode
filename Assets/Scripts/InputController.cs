@@ -9,7 +9,6 @@ using Pseudo.Injection;
 
 public class InputController : ControllerBase
 {
-	public float Speed = 5f;
 	public Players Player;
 	public MotionBase Motion;
 
@@ -24,9 +23,14 @@ public class InputController : ControllerBase
 		player = inputManager.GetAssignedInput(Player);
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
 		var direction = new Vector2(player.GetAction("MotionX").GetAxis(), player.GetAction("MotionY").GetAxis()).normalized;
-		Motion.Move(direction * Speed);
+
+		if (direction != Vector2.zero)
+		{
+			Motion.Move(direction);
+			Motion.LookAt(direction.Angle());
+		}
 	}
 }
