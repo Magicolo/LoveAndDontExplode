@@ -5,9 +5,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public class WeaponModule : ModuleBase
+public class MotionModule : ModuleBase
 {
-	void Update()
+	[Header("Uses 'MotionX' action.")]
+	public MotionBase ShipMotion;
+
+	void FixedUpdate()
 	{
 		if (owner == null)
 			return;
@@ -17,9 +20,7 @@ public class WeaponModule : ModuleBase
 
 	public override void UpdateModule(ActivatorBase owner)
 	{
-		if (owner.Input.GetAction("Fire").GetKey())
-		{
-			// Fire Logic
-		}
+		var input = owner.Input.GetAction("MotionX").GetAxis();
+		ShipMotion.Move(new Vector2(input, 0f));
 	}
 }

@@ -8,7 +8,7 @@ using Pseudo.Injection;
 
 public class LeapModule : ModuleBase
 {
-	[Header("Uses 'MotionX' and 'MotionY' axes.")]
+	[Header("Uses 'MotionY' action.")]
 	public MotionBase ShipMotion;
 	public Lane StartLane;
 	public LeapTarget LeapPreview;
@@ -27,19 +27,23 @@ public class LeapModule : ModuleBase
 		currentLane = StartLane;
 	}
 
+	void Update()
+	{
+		if (owner == null)
+			return;
+
+		UpdateModule(owner);
+	}
+
 	public override void UpdateModule(ActivatorBase owner)
 	{
-		var input = new Vector2(owner.Input.GetAction("MotionX").GetAxis(), owner.Input.GetAction("MotionY").GetAxis());
-		bool leaping = Mathf.Abs(input.y) > 0.5f;
+		var input = owner.Input.GetAction("MotionY").GetAxis();
+		bool leaping = Mathf.Abs(input) > 0.5f;
 
-		// Horizontal motion
-		ShipMotion.Move(new Vector2(input.x, 0f));
-
-		// Vertical motion
 		if (leapCounter <= 0f)
 		{
-			if (leaping && ShowPreview(input.y.Sign()))
-				BeginLeap(input.y.Sign());
+			if (leaping && ShowPreview(input.Sign()))
+				BeginLeap(input.Sign());
 			else
 				HidePreview();
 		}

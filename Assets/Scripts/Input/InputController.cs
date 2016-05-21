@@ -9,7 +9,7 @@ using Pseudo.Injection;
 
 public class InputController : ControllerBase
 {
-	[Header("Uses 'MotionX' and 'MotionY' axes.")]
+	[Header("Uses 'MotionX' and 'MotionY' actions.")]
 	public InputComponent Input;
 	public MotionBase Motion;
 

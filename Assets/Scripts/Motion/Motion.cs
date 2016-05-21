@@ -11,9 +11,9 @@ public class Motion : MotionBase
 {
 	public float MoveSpeed = 5f;
 	public float RotateSpeed = 5f;
+	public bool UseVelocity;
 
 	Rigidbody2D body;
-	Vector2 velocity;
 	TimeComponent time;
 
 	void Awake()
@@ -28,8 +28,10 @@ public class Motion : MotionBase
 		{
 			if (instant)
 				body.Translate(motion);
-			else
+			else if (UseVelocity)
 				body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
+			else
+				body.Translate(motion * MoveSpeed * time.FixedDeltaTime);
 		}
 	}
 
@@ -38,7 +40,7 @@ public class Motion : MotionBase
 		if (GetComponent<FreezeMotion>() == null)
 		{
 			if (instant)
-				body.position = motion;
+				body.SetPosition(motion);
 			else
 				body.TranslateTowards(motion, time.FixedDeltaTime * MoveSpeed);
 		}
@@ -50,6 +52,8 @@ public class Motion : MotionBase
 		{
 			if (instant)
 				body.Rotate(angle);
+			else if (UseVelocity)
+				body.angularVelocity = Mathf.Lerp(body.angularVelocity, angle * RotateSpeed, time.FixedDeltaTime);
 			else
 				body.Rotate(angle * RotateSpeed * time.FixedDeltaTime);
 		}
@@ -60,7 +64,7 @@ public class Motion : MotionBase
 		if (GetComponent<FreezeMotion>() == null)
 		{
 			if (instant)
-				body.rotation = angle;
+				body.SetEulerAngle(angle);
 			else
 				body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
 		}
