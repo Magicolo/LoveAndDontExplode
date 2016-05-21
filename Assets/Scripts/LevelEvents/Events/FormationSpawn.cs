@@ -7,13 +7,16 @@ using Pseudo;
 using Pseudo.Injection;
 
 [RequireComponent(typeof(TimeComponent))]
-public class FormationSpawn : ILevelEvent
+public class FormationSpawn : SpawnnerEvent
 {
 	[Inject(Cameras.Main)]
 	Camera Cam;
 
 	[Slider(0, 1), Tooltip("Location Spawnned par rapport à L'écran. 0 = gauche, 1 = à droite.")]
 	public float RatioXStart;
+
+	[Min(0)]
+	public int NbToSpawn;
 
 	public GameObject PrefabToSpawn;
 	public FormationComponent Formation;
@@ -29,15 +32,18 @@ public class FormationSpawn : ILevelEvent
 	{
 		if (Formation == null)
 		{
-			Debug.LogError("Yo peux pas etre null");
+			Debug.LogError("Yo J'ai besoin dun formation.");
 			return;
 		}
-		float levelHeight = GetComponentInParent<LevelEvents>().LevelHeight;
-		GameObject go = GameObject.Instantiate(PrefabToSpawn);
-		Vector3 p = Cam.ViewportToWorldPoint(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, -Cam.transform.position.z));
-		//PDebug.Log(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, 0), p);
-		// TODO offsetSelon le sprite;
-		go.transform.position = p;
+
+		for (int i = 0; i < NbToSpawn; i++)
+		{
+			GameObject go = Spawn(PrefabToSpawn, Cam, RatioXStart);
+			Vector3 p = Formation.GetFormationPosition(i, NbToSpawn);
+			go.transform.position += p;
+		}
+
+
 		enabled = false;
 
 	}

@@ -7,7 +7,7 @@ using Pseudo;
 using Pseudo.Injection;
 
 [RequireComponent(typeof(TimeComponent))]
-public class SpawnLevelEvent : ILevelEvent
+public class SpawnLevelEvent : SpawnnerEvent
 {
 
 	[Inject(Cameras.Main)]
@@ -41,12 +41,8 @@ public class SpawnLevelEvent : ILevelEvent
 
 	private void Spawn()
 	{
-		float levelHeight = GetComponentInParent<LevelEvents>().LevelHeight;
-		GameObject go = GameObject.Instantiate(PrefabToSpawn);
-		Vector3 p = Cam.ViewportToWorldPoint(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, -Cam.transform.position.z));
-		//PDebug.Log(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, 0), p);
-		// TODO offsetSelon le sprite;
-		go.transform.position = p;
+		Spawn(PrefabToSpawn, Cam, RatioXStart);
+
 		nextSpawn = GetComponent<TimeComponent>().Time + SpawnFrequency;
 		spawned++;
 		if (spawned >= SpawnQuantity)
