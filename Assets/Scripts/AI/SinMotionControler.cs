@@ -19,7 +19,7 @@ public class SinMotionControler : ControllerBase
 	void FixedUpdate()
 	{
 		var y = (float)(Amplitude * Math.Sin(Frequency * t + Offset));
-		var direction = new Vector2(1, y);
+		var direction = new Vector2(1, y).Rotate(Motion.transform.rotation.eulerAngles.z);
 		t += GetComponent<TimeComponent>().DeltaTime;
 
 		if (direction != Vector2.zero)
