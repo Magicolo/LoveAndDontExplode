@@ -56,6 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   installers:
   - {fileID: 11494524}
+  - {fileID: 11476192}
   assemblies: []
 --- !u!114 &11494524
 MonoBehaviour:

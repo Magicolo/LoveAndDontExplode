@@ -19,8 +19,7 @@ public abstract class ModuleBase : PMonoBehaviour
 
 	protected virtual void OnActivated(ActivatorBase owner)
 	{
-		if (owner == null)
-			this.owner = owner;
+		this.owner = owner;
 	}
 
 	protected virtual void OnDeactivated(ActivatorBase owner)
