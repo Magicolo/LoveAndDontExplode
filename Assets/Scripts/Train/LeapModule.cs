@@ -6,10 +6,9 @@ using System.Collections.Generic;
 using Pseudo;
 using Pseudo.Injection;
 
-public class NavigationModule : ModuleBase
+public class LeapModule : ModuleBase
 {
 	[Header("Uses 'MotionX' and 'MotionY' axes.")]
-	[Header("Uses 'Use' action.")]
 	public MotionBase ShipMotion;
 	public Lane StartLane;
 	public LeapTarget LeapPreview;
@@ -31,20 +30,23 @@ public class NavigationModule : ModuleBase
 	public override void UpdateModule(ActivatorBase owner)
 	{
 		var input = new Vector2(owner.Input.GetAction("MotionX").GetAxis(), owner.Input.GetAction("MotionY").GetAxis());
-		var use = owner.Input.GetAction("Use").GetKeyDown();
+		bool leaping = Mathf.Abs(input.y) > 0.5f;
 
+		// Horizontal motion
+		ShipMotion.Move(new Vector2(input.x, 0f));
+
+		// Vertical motion
 		if (leapCounter <= 0f)
 		{
-			if (Mathf.Abs(input.y) > 0.5f)
-			{
-				if (ShowPreview(input.y.Sign()) && use)
-					BeginLeap(input.y.Sign());
-			}
+			if (leaping && ShowPreview(input.y.Sign()))
+				BeginLeap(input.y.Sign());
 			else
 				HidePreview();
 		}
-		else
+		else if (leaping)
 			UpdateLeap();
+		else
+			CancelLeap();
 	}
 
 	/// <returns>Is the direction valid.</returns>
@@ -52,10 +54,10 @@ public class NavigationModule : ModuleBase
 	{
 		int targetIndex = levelManager.Lanes.IndexOf(currentLane) + direction;
 
-		if (targetIndex > 0 && targetIndex < levelManager.Lanes.Length)
+		if (targetIndex >= 0 && targetIndex < levelManager.Lanes.Length)
 		{
 			LeapPreview.gameObject.SetActive(true);
-			LeapPreview.Lane = levelManager.Lanes[targetIndex];
+			LeapPreview.SetLane(levelManager.Lanes[targetIndex]);
 			return true;
 		}
 		else
@@ -69,8 +71,8 @@ public class NavigationModule : ModuleBase
 
 	void BeginLeap(int direction)
 	{
-		ShowPreview(direction);
 		leapCounter = LeapDelay;
+		ShowPreview(direction);
 	}
 
 	void UpdateLeap()
@@ -81,10 +83,17 @@ public class NavigationModule : ModuleBase
 			EndLeap();
 	}
 
+	void CancelLeap()
+	{
+		leapCounter = 0f;
+		HidePreview();
+	}
+
 	void EndLeap()
 	{
-		HidePreview();
-		ShipMotion.MoveTo(LeapPreview.transform.position, true);
 		leapCounter = 0f;
+		currentLane = LeapPreview.Lane;
+		ShipMotion.MoveTo(LeapPreview.transform.position, true);
+		HidePreview();
 	}
 }

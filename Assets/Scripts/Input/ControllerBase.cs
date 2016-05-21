@@ -5,7 +5,4 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public abstract class ControllerBase : PMonoBehaviour
-{
-
-}
+public abstract class ControllerBase : PMonoBehaviour { }

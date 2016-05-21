@@ -12,7 +12,7 @@ using Pseudo.Oscillation.Internal;
 
 namespace Pseudo
 {
-	public class PropertyOscillator : ComponentBehaviourBase
+	public class PropertyOscillator : PMonoBehaviour
 	{
 		[Serializable]
 		public struct OscillationRangeSettings
@@ -103,10 +103,13 @@ namespace Pseudo
 		public OscillatorData[] Oscillators = new OscillatorData[0];
 		public TimeComponent Time;
 
-		public override void OnAdded()
+		void Awake()
 		{
-			base.OnAdded();
+			OnCreate();
+		}
 
+		void OnCreate()
+		{
 			Initialize();
 		}
 
