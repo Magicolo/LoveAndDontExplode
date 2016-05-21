@@ -7,12 +7,14 @@ using Pseudo;
 
 public class Activateable : PMonoBehaviour
 {
+	[Header("Sends 'OnActivated' on activation.")]
+	[Header("Sends 'OnDeactivated' on deactivation.")]
 	public SelectorBase Selector;
 	public ActivatorBase Owner
 	{
 		get { return owner; }
 	}
-	public bool InUse
+	public bool Active
 	{
 		get { return owner != null; }
 	}
@@ -22,11 +24,12 @@ public class Activateable : PMonoBehaviour
 
 	public bool Activate(ActivatorBase owner)
 	{
-		if (InUse)
+		if (Active)
 			return false;
 
 		this.owner = owner;
 		UpdateSelector();
+		SendMessage("OnActivated", owner);
 
 		return true;
 	}
@@ -37,6 +40,7 @@ public class Activateable : PMonoBehaviour
 		{
 			this.owner = null;
 			UpdateSelector();
+			SendMessage("OnDeactivated", owner);
 
 			return true;
 		}
@@ -44,13 +48,13 @@ public class Activateable : PMonoBehaviour
 		return false;
 	}
 
-	public void EnterRange(ActivatorBase activator)
+	public void EnterRange(ActivatorBase owner)
 	{
 		inRangeCounter++;
 		UpdateSelector();
 	}
 
-	public void ExitRange(ActivatorBase activator)
+	public void ExitRange(ActivatorBase owner)
 	{
 		inRangeCounter--;
 		UpdateSelector();
@@ -61,7 +65,7 @@ public class Activateable : PMonoBehaviour
 		if (Selector != null)
 		{
 			Selector.Showing = inRangeCounter > 0;
-			Selector.InUse = InUse;
+			Selector.InUse = Active;
 		}
 	}
 }

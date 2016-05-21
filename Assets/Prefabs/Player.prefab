@@ -26,6 +26,7 @@ GameObject:
   - 4: {fileID: 406614}
   - 50: {fileID: 5015426}
   - 114: {fileID: 11475196}
+  - 114: {fileID: 11489242}
   - 114: {fileID: 11455740}
   - 114: {fileID: 11433176}
   - 114: {fileID: 11437264}
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1395b306db4ec3d45b3eeb56adaf084d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 1
+  Input: {fileID: 11489242}
   Motion: {fileID: 11455740}
 --- !u!114 &11437264
 MonoBehaviour:
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875e9dceaf783c04684ec3f1522ae45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 1
+  Input: {fileID: 11489242}
 --- !u!114 &11455740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +177,18 @@ MonoBehaviour:
   time:
     channel: 4
     timeScale: 1
+--- !u!114 &11489242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c38eb6def825544b22ed16fc14026d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: 1
 --- !u!212 &21285514
 SpriteRenderer:
   m_ObjectHideFlags: 1

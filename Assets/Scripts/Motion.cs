@@ -21,15 +21,47 @@ public class Motion : MotionBase
 		time = GetComponent<TimeComponent>();
 	}
 
-	public override void Move(Vector2 motion)
+	public override void Move(Vector2 motion, bool instant = false)
 	{
 		if (GetComponent<FreezeMotion>() == null)
-			body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
+		{
+			if (instant)
+				body.Translate(motion);
+			else
+				body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
+		}
 	}
 
-	public override void LookAt(float angle)
+	public override void MoveTo(Vector2 motion, bool instant = false)
 	{
 		if (GetComponent<FreezeMotion>() == null)
-			body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
+		{
+			if (instant)
+				body.position = motion;
+			else
+				body.TranslateTowards(motion, time.FixedDeltaTime * MoveSpeed);
+		}
+	}
+
+	public override void Rotate(float angle, bool instant = false)
+	{
+		if (GetComponent<FreezeMotion>() == null)
+		{
+			if (instant)
+				body.Rotate(angle);
+			else
+				body.Rotate(angle * RotateSpeed * time.FixedDeltaTime);
+		}
+	}
+
+	public override void RotateTo(float angle, bool instant = false)
+	{
+		if (GetComponent<FreezeMotion>() == null)
+		{
+			if (instant)
+				body.rotation = angle;
+			else
+				body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
+		}
 	}
 }

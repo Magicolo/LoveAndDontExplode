@@ -7,6 +7,7 @@ using Pseudo;
 
 public class Damageable : PMonoBehaviour
 {
+	[Header("Sends 'OnDamaged' when damaged.")]
 	[Header("Sends 'OnKilled' on death.")]
 	public float MaxHealth = 100;
 
@@ -21,12 +22,10 @@ public class Damageable : PMonoBehaviour
 
 		Health -= damage;
 
-		// If newly dead, send message.
-		if (!Alive)
-		{
+		if (Alive)
+			SendMessage("OnDamaged");
+		else
 			SendMessage("OnKilled");
-			return false;
-		}
 
 		return Alive;
 	}

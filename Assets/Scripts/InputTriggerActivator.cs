@@ -9,28 +9,15 @@ using Pseudo.Injection;
 
 public class InputTriggerActivator : ActivatorBase
 {
-	[Header("Uses 'Activate' action.")]
-	public Players Player;
-
 	Activateable activateable;
-	[Inject]
-	IInputManager inputManager = null;
-	PlayerInput input;
 	FreezeMotion freezer;
-
-	protected override void Start()
-	{
-		base.Start();
-
-		input = inputManager.GetAssignedInput(Player);
-	}
 
 	void Update()
 	{
-		if (input.GetAction("Activate").GetKeyDown() && activateable != null)
+		if (Input.GetAction("Activate").GetKeyDown() && activateable != null)
 		{
 			// In use by self or other player.
-			if (activateable.InUse)
+			if (activateable.Active)
 			{
 				// Deactivation is successful. Reactivate motion.
 				if (activateable.Deactivate(this))

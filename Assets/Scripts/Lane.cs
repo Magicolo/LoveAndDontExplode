@@ -5,8 +5,4 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public abstract class ActivatorBase : PMonoBehaviour
-{
-	[Header("Uses 'Activate' action.")]
-	public InputComponent Input;
-}
+public class Lane : PMonoBehaviour { }
