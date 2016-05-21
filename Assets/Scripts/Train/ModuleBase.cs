@@ -7,15 +7,7 @@ using Pseudo;
 
 public abstract class ModuleBase : PMonoBehaviour
 {
-	ActivatorBase owner;
-
-	void Update()
-	{
-		if (owner == null)
-			return;
-
-		UpdateModule(owner);
-	}
+	protected ActivatorBase owner;
 
 	protected virtual void OnActivated(ActivatorBase owner)
 	{
