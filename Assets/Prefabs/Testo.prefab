@@ -26,6 +26,7 @@ GameObject:
   - 4: {fileID: 492600}
   - 114: {fileID: 11496520}
   - 114: {fileID: 11442882}
+  - 114: {fileID: 11416834}
   m_Layer: 0
   m_Name: ShooterWeapon
   m_TagString: Untagged
@@ -61,10 +62,43 @@ GameObject:
   - 50: {fileID: 5030632}
   - 114: {fileID: 11409558}
   - 114: {fileID: 11427942}
-  - 114: {fileID: 11442248}
   - 114: {fileID: 11495902}
+  - 114: {fileID: 11429046}
+  - 114: {fileID: 11452808}
   m_Layer: 0
   m_Name: Testo
+  m_TagString: Enemis
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &184008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 425872}
+  - 114: {fileID: 11449254}
+  m_Layer: 0
+  m_Name: MoveTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &198780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441150}
+  - 114: {fileID: 11446670}
+  m_Layer: 0
+  m_Name: FireTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,14 +111,40 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97881806, y: 3.0790846, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 471378}
   - {fileID: 492448}
   - {fileID: 492600}
+  - {fileID: 425872}
+  - {fileID: 441150}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &425872
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 420590}
+  m_RootOrder: 3
+--- !u!4 &441150
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 420590}
+  m_RootOrder: 4
 --- !u!4 &471378
 Transform:
   m_ObjectHideFlags: 1
@@ -132,7 +192,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -152,6 +212,18 @@ MonoBehaviour:
   time:
     channel: 0
     timeScale: 1
+--- !u!114 &11416834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617b8e55984d724d87a3d71a4ce8c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11446670}
 --- !u!114 &11427942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,10 +235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bc99b4088ae9648be2f7ac3c801f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 5
-  RotateSpeed: 5
+  MoveSpeed: 2
+  RotateSpeed: 2
   UseVelocity: 0
---- !u!114 &11442248
+--- !u!114 &11429046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -174,13 +246,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 156210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 893b864043c7692459d5168360aeb328, type: 3}
+  m_Script: {fileID: 11500000, guid: f4e3265c98361a14ebeb0ff52b9da8f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Motion: {fileID: 11427942}
-  Frequency: 1
-  Amplitude: 1
-  Offset: 0
+  Target: {fileID: 11449254}
 --- !u!114 &11442882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,12 +262,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 0}
+  Projectile: {fileID: 11439978, guid: b95854f66896efe4583285d40141b018, type: 2}
   WeaponRoot: {fileID: 492600}
   Cooldown: 3
   Ammo: 2
-  FireRate: 0.5
+  FireRate: 1
   currentAmmo: 0
+--- !u!114 &11446670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e206baf29421b1b4db0723b014fe7863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetKey: Fire
+  Target: {fileID: 0}
+--- !u!114 &11449254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e206baf29421b1b4db0723b014fe7863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetKey: Motion
+  Target: {fileID: 0}
+--- !u!114 &11452808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 156210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8e6ecf3c4e0954aacb3365ebfbb937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 11449254}
+  Epsilon: 0.1
 --- !u!114 &11495902
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -99,7 +99,8 @@ namespace Pseudo
 	{
 		Uniform,
 		Gaussian,
-		Exponential
+		Exponential,
+		InversedGaussian
 	}
 
 	public enum RaycastHitModes : byte

@@ -15,6 +15,8 @@ public abstract class SpawnnerEvent : ILevelEvent
 		//PDebug.Log(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, 0), p);
 		// TODO offsetSelon le sprite;
 		go.transform.position = p;
+
+		gameObject.SendMessage("Spawing", go, SendMessageOptions.DontRequireReceiver);
 		return go;
 	}
 }

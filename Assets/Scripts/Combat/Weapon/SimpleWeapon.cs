@@ -16,10 +16,10 @@ public class SimpleWeapon : WeaponBase
 	public float Cooldown;
 
 	[Min(1)]
-	public float Ammo;
+	public float Ammo = 1;
 
 	[Min(0.0001f)]
-	public float FireRate;
+	public float FireRate = 1;
 
 	[Disable]
 	public float currentAmmo;
@@ -44,7 +44,7 @@ public class SimpleWeapon : WeaponBase
 			Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
 			if (currentAmmo == 0)
 			{
-				t = GetComponent<TimeComponent>().Time + Cooldown;
+				t = GetComponent<TimeComponent>().Time + Cooldown + FireRate;
 			}
 			else
 			{
