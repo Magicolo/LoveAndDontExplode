@@ -13,6 +13,7 @@ public class Motion : MotionBase
 	public float RotateSpeed = 5f;
 
 	Rigidbody2D body;
+	Vector2 velocity;
 	TimeComponent time;
 
 	void Awake()
