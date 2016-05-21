@@ -16,6 +16,7 @@ public class FormationSpawn : ILevelEvent
 	public float RatioXStart;
 
 	public GameObject PrefabToSpawn;
+	public FormationComponent Formation;
 
 
 
@@ -26,6 +27,11 @@ public class FormationSpawn : ILevelEvent
 
 	private void Spawn()
 	{
+		if (Formation == null)
+		{
+			Debug.LogError("Yo peux pas etre null");
+			return;
+		}
 		float levelHeight = GetComponentInParent<LevelEvents>().LevelHeight;
 		GameObject go = GameObject.Instantiate(PrefabToSpawn);
 		Vector3 p = Cam.ViewportToWorldPoint(new Vector3(RatioXStart, transform.localPosition.y / levelHeight, -Cam.transform.position.z));
