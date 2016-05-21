@@ -11,7 +11,7 @@ public class SpawnLevelEvent : ILevelEvent
 {
 
 	[Inject(Cameras.Main)]
-	Camera Cam;
+	Camera Cam = null;
 
 	[Slider(0, 1), Tooltip("Location Spawnned par rapport à L'écran. 0 = gauche, 1 = à droite.")]
 	public float RatioXStart;
