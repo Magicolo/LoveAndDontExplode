@@ -1,63 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &194650
+--- !u!1 &118266
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 434306}
-  - 114: {fileID: 11439978}
-  - 114: {fileID: 11479252}
+  - 4: {fileID: 461764}
+  - 114: {fileID: 11498912}
+  - 114: {fileID: 11443936}
   m_Layer: 0
-  m_Name: CircleProjectile
+  m_Name: LazerBulletProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &434306
+--- !u!4 &461764
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194650}
+  m_GameObject: {fileID: 118266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11439978
+--- !u!114 &11443936
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab97378385b2b764294b91e9706cc591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Formation: {fileID: 11479252}
-  Prefab: {fileID: 140362, guid: 01990df8cfad82a48839dbf71ce9aaa4, type: 2}
-  NbSpawn: 2
-  RotateTowardFormation: 1
---- !u!114 &11479252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194650}
+  m_GameObject: {fileID: 118266}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: daa193b999cd02c409a8ec3b22d216d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 1
-  Spread: 10
+  Radius: 0
+  Spread: 0
   AngleOffset: 0
+--- !u!114 &11498912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab97378385b2b764294b91e9706cc591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Formation: {fileID: 11443936}
+  Prefab: {fileID: 127996, guid: a0fa5a7891ab8074698686716f7de428, type: 2}
+  NbSpawn: 1
+  RotateTowardFormation: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -67,5 +67,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 194650}
+  m_RootGameObject: {fileID: 118266}
   m_IsPrefabParent: 1

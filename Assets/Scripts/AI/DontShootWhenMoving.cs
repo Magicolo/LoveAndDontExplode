@@ -5,14 +5,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public class JustFireAi : MonoBehaviour
+public class DontShootWhenMoving : MonoBehaviour
 {
 
-	public WeaponBase Weapon;
+	public MotionBase Motion;
 
 	void Update()
 	{
-		if (Weapon.CanFire())
-			Weapon.Fire();
+
 	}
 }

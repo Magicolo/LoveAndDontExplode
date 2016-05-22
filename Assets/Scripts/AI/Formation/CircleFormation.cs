@@ -13,11 +13,14 @@ public class CircleFormation : FormationComponent
 	[Min(0), Max(360)]
 	public float Spread = 360;
 
+	public float AngleOffset;
+
 	public override Vector3 GetFormationPosition(int index, int total)
 	{
 		float arc = Spread * Mathf.Deg2Rad;
-		float x = (float)(Radius * Math.Cos(index * arc / total));
-		float y = (float)(Radius * Math.Sin(index * arc / total));
+		float a = (AngleOffset - Spread / 2) * Mathf.Deg2Rad + index * arc / total;
+		float x = (float)(Radius * Math.Cos(a));
+		float y = (float)(Radius * Math.Sin(a));
 
 		return new Vector3(x, y, 0);
 	}

@@ -12,6 +12,6 @@ public class StraightMotionControler : ControllerBase
 
 	void FixedUpdate()
 	{
-		Motion.Move(transform.up);
+		Motion.Move(transform.right);
 	}
 }

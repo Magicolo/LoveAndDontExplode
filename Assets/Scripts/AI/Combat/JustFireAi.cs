@@ -5,8 +5,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public abstract class ControllerBase : PMonoBehaviour
+public class JustFireAi : MonoBehaviour
 {
+	public WeaponBase Weapon;
 
-	protected Camera cam { get { return Camera.main; } }
+	void Update()
+	{
+		if (Weapon.CanFire())
+			Weapon.Fire();
+	}
 }

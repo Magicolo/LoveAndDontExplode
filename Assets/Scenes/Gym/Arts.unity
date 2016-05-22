@@ -281,6 +281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: 12.4
   Spread: 90
+  AngleOffset: 0
 --- !u!4 &709844422
 Transform:
   m_ObjectHideFlags: 0

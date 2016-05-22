@@ -27,7 +27,7 @@ public class Testo : MonoBehaviour
 			{
 				fucked++;
 				fsum += d;
-				Debug.Log(d);
+				//Debug.Log(d);
 			}
 
 		}

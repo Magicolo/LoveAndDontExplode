@@ -9,9 +9,12 @@ public class LookAtTarget : MonoBehaviour
 {
 	public TransformTarget Target;
 
+	Vector3 tp { get { return Target.Target.position; } }
+
 	void Update()
 	{
-		transform.LookAt(Target.Target, Vector3.up);
+		float angle = Mathf.Rad2Deg * Mathf.Atan2(tp.y - transform.position.y, tp.x - transform.position.x);
+		transform.RotateTowards(angle, 0.1f, Axes.Z);
 	}
 
 }
