@@ -7,6 +7,9 @@ using Pseudo;
 
 public class WeaponModule : ModuleBase
 {
+
+	public Turret Turret;
+
 	void Update()
 	{
 		if (owner == null)
@@ -19,7 +22,18 @@ public class WeaponModule : ModuleBase
 	{
 		if (owner.Input.GetAction("Fire").GetKey())
 		{
-			// Fire Logic
+			if (Turret.Weapon.CanFire())
+				Turret.Weapon.Fire();
+		}
+
+		float direction = -owner.Input.GetAction("MotionX").GetAxis();
+		if (direction != 0)
+		{
+			float rotation = direction * Turret.RotationSpeed * GetComponentInParent<TimeComponent>().DeltaTime;
+			float z = Turret.transform.rotation.eulerAngles.z + rotation;
+			z = z.Clamp(Turret.AngleRange);
+			Turret.transform.rotation = Quaternion.Euler(0, 0, z);
+
 		}
 	}
 }
