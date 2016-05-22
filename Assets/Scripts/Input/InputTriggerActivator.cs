@@ -16,16 +16,8 @@ public class InputTriggerActivator : ActivatorBase
 	{
 		if (Input.GetAction("Activate").GetKeyDown() && activateable != null)
 		{
-			// In use by self or other player.
-			if (activateable.Active)
-			{
-				// Deactivation is successful. Reactivate motion.
-				if (activateable.Deactivate(this))
-					freezer.Destroy();
-			}
-			// Activation is successful. Move to activateable and deactivate motion.
-			else if (activateable.Activate(this))
-				freezer = gameObject.AddComponent<FreezeMotion>();
+			if (!Activate())
+				Deactivate();
 		}
 	}
 
@@ -43,5 +35,33 @@ public class InputTriggerActivator : ActivatorBase
 
 		if (activateable != null)
 			activateable.ExitRange(this);
+	}
+
+	public override bool Activate()
+	{
+		// Activation is successful. Move to activateable and deactivate motion.
+		if (!activateable.Active && activateable.Activate(this))
+		{
+			freezer = gameObject.AddComponent<FreezeMotion>();
+			return true;
+		}
+		else
+			return false;
+	}
+
+	public override bool Deactivate()
+	{
+		// In use by self or other player.
+		if (activateable.Active)
+		{
+			// Deactivation is successful. Reactivate motion.
+			if (activateable.Deactivate(this))
+			{
+				freezer.Destroy();
+				return true;
+			}
+		}
+
+		return false;
 	}
 }

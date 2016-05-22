@@ -171,6 +171,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &79567938 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 133814, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+  m_PrefabInternal: {fileID: 101689422}
+--- !u!114 &79567940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79567938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a275034084508d40a45db918ef479b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Turret: {fileID: 1358004487}
+  Time: {fileID: 896918040}
 --- !u!1001 &101689422
 Prefab:
   m_ObjectHideFlags: 0
@@ -210,7 +227,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11497002, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &293047088
@@ -313,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &507111009
 Transform:
   m_ObjectHideFlags: 0
@@ -631,6 +649,12 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &896918040 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11435392, guid: c438f404924017e4485d7cb6f6e6129b,
+    type: 2}
+  m_PrefabInternal: {fileID: 101689422}
+  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
 --- !u!1 &1087139910
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +700,12 @@ MonoBehaviour:
   LevelTime: 147.74
   TrainLines: 3
   WorldCollider: {fileID: 2080387417}
+--- !u!114 &1358004487 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11411408, guid: c438f404924017e4485d7cb6f6e6129b,
+    type: 2}
+  m_PrefabInternal: {fileID: 101689422}
+  m_Script: {fileID: 11500000, guid: d24984ed69d7bac4993a9ce6a37bab35, type: 3}
 --- !u!1 &1417352806
 GameObject:
   m_ObjectHideFlags: 0

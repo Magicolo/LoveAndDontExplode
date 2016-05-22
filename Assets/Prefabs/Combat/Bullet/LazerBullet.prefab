@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11460928}
   m_Layer: 0
   m_Name: LazerBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 100
   RotateSpeed: 5
-  UseVelocity: 0
 --- !u!212 &21247558
 SpriteRenderer:
   m_ObjectHideFlags: 1
