@@ -251,7 +251,8 @@ MonoBehaviour:
   AttackingZone:
     min: 0.2
     max: 0.8
-  Weapon: {fileID: 11468868}
+  Weapons:
+  - {fileID: 11468868}
 --- !u!114 &11443534
 MonoBehaviour:
   m_ObjectHideFlags: 1
