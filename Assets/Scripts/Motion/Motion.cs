@@ -43,6 +43,8 @@ public class Motion : MotionBase
 			lastPosition = inherit.position;
 			velocity *= 1f - Mathf.Clamp01(body.drag / 100f);
 		}
+		else if (body.isKinematic)
+			body.velocity *= 1f - Mathf.Clamp01(body.drag / 100f);
 	}
 
 	public override void Move(Vector2 motion, bool instant = false)
