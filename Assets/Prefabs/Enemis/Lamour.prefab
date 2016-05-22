@@ -250,9 +250,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11498912, guid: d570dba21335deb4c8c885d4d80d14d2, type: 2}
   WeaponRoot: {fileID: 448004}
-  Cooldown: 0
-  Ammo: 1
-  FireRate: 0.04
+  Cooldown:
+    min: 3
+    max: 4
+  Ammo:
+    min: 100
+    max: 100
+  FireRate:
+    min: 0.1
+    max: 0.1
   currentAmmo: 0
 --- !u!114 &11465644
 MonoBehaviour:
@@ -294,9 +300,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11498912, guid: d570dba21335deb4c8c885d4d80d14d2, type: 2}
   WeaponRoot: {fileID: 481474}
-  Cooldown: 0
-  Ammo: 1
-  FireRate: 0.04
+  Cooldown:
+    min: 3
+    max: 4
+  Ammo:
+    min: 100
+    max: 100
+  FireRate:
+    min: 0.1
+    max: 0.1
   currentAmmo: 0
 --- !u!198 &19859146
 ParticleSystem:

@@ -239,9 +239,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11439978, guid: b95854f66896efe4583285d40141b018, type: 2}
   WeaponRoot: {fileID: 486292}
-  Cooldown: 3
-  Ammo: 3
-  FireRate: 0.2
+  Cooldown:
+    min: 3
+    max: 4
+  Ammo:
+    min: 3
+    max: 3
+  FireRate:
+    min: 0.2
+    max: 0.3
   currentAmmo: 0
 --- !u!114 &11425360
 MonoBehaviour:
