@@ -113,6 +113,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 0
@@ -125,6 +126,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 4
@@ -136,7 +138,8 @@ Transform:
   m_GameObject: {fileID: 103016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -501.24, y: -86.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 401926}
   - {fileID: 436474}
@@ -154,6 +157,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 1
@@ -166,6 +170,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 3
@@ -178,6 +183,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 2
@@ -249,8 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackingZone:
-    min: 0.2
-    max: 0.8
+    min: 0.02
+    max: 0.95
   Weapons:
   - {fileID: 11468868}
 --- !u!114 &11443534
@@ -266,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motion: {fileID: 11464312}
   Target: {fileID: 11416100}
-  LockedAxes: 2
+  LockedAxes: 4
 --- !u!114 &11457850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,9 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bc99b4088ae9648be2f7ac3c801f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 33
+  MoveSpeed: 43.13
   RotateSpeed: 2
-  UseVelocity: 0
 --- !u!114 &11468282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -307,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time:
     channel: 0
-    timeScale: 1
+    timeScale: 2.29
 --- !u!114 &11468868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,9 +326,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11439978, guid: b95854f66896efe4583285d40141b018, type: 2}
   WeaponRoot: {fileID: 493730}
-  Cooldown: 3
-  Ammo: 3
-  FireRate: 0.2
+  Cooldown: 2.83
+  Ammo: 2
+  FireRate: 0.76
   currentAmmo: 0
 --- !u!114 &11491198
 MonoBehaviour:

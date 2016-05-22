@@ -1,64 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &194650
+--- !u!1 &103218
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 434306}
-  - 114: {fileID: 11439978}
-  - 114: {fileID: 11479252}
+  - 4: {fileID: 476936}
+  - 114: {fileID: 11408300}
   m_Layer: 0
-  m_Name: CircleProjectile
+  m_Name: EnemyMovementTarget
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1089502233064743932, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &434306
+--- !u!4 &476936
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194650}
+  m_GameObject: {fileID: 103218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: -52, y: -200, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11439978
+--- !u!114 &11408300
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194650}
+  m_GameObject: {fileID: 103218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab97378385b2b764294b91e9706cc591, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e31c98c565be46c4a0b737dadb109bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Formation: {fileID: 11479252}
-  Prefab: {fileID: 140362, guid: 01990df8cfad82a48839dbf71ce9aaa4, type: 2}
-  NbSpawn: 1
-  RotateTowardFormation: 1
---- !u!114 &11479252
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daa193b999cd02c409a8ec3b22d216d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Radius: 1
-  Spread: 10
-  AngleOffset: 0
+  gizmoColour: {r: 0.9044118, g: 0.23940313, b: 0.23940313, a: 1}
+  gizmoType: 0
+  radius: 5
+  boxSize: {x: 1, y: 1, z: 1}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -68,5 +54,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 194650}
+  m_RootGameObject: {fileID: 103218}
   m_IsPrefabParent: 1

@@ -46,6 +46,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 494376}
   m_RootOrder: 0
@@ -57,7 +58,8 @@ Transform:
   m_GameObject: {fileID: 140362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 46.626545, y: 2.1330187, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.85, y: 1.5, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 489908}
   m_Father: {fileID: 0}
@@ -99,14 +101,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140362}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 893b864043c7692459d5168360aeb328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Motion: {fileID: 11476150}
-  Frequency: 1
-  Amplitude: 1
+  Frequency: 12.2
+  Amplitude: 3.9
   Offset: 0
 --- !u!114 &11465392
 MonoBehaviour:
@@ -131,8 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bc99b4088ae9648be2f7ac3c801f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 32
-  RotateSpeed: 5
+  MoveSpeed: 51
+  RotateSpeed: 0
 --- !u!114 &11489862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time:
     channel: 0
-    timeScale: 1
+    timeScale: 1.76
 --- !u!212 &21245604
 SpriteRenderer:
   m_ObjectHideFlags: 1
