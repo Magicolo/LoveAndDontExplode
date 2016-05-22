@@ -13,7 +13,6 @@ public class RelayProjectile : ProjectileBase
 
 	public override void Fire(Vector3 position, float angle)
 	{
-		Debug.Log("FIRE ALL CANNONS");
 		for (int i = 0; i < Projectiles.Length; i++)
 		{
 			var p = Projectiles[i];

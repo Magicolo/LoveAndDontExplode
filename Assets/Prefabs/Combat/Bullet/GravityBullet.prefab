@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11434364}
   m_Layer: 0
   m_Name: GravityBullet
-  m_TagString: Bullet
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5afd2611c2dd0a4bbc9bec4e02864d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 5
+  DamageToCause:
+    Damage: 4
+    Sources: 1
+    Types: 1
 --- !u!114 &11440122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bc99b4088ae9648be2f7ac3c801f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 32
+  MoveSpeed: 320
   RotateSpeed: 5
 --- !u!212 &21245182
 SpriteRenderer:

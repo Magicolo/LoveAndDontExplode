@@ -5,7 +5,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-[ExecuteInEditMode()]
 public class LevelBound : MonoBehaviour
 {
 
@@ -21,7 +20,10 @@ public class LevelBound : MonoBehaviour
 	public BulletBound EnemisBulletBound;
 
 
-	void Update()
+	[Button("Update Bounds", "UpdateBounds")]
+	public bool updateBounds;
+
+	void UpdateBounds()
 	{
 		PlayerBulletBound.Resize(Cam.WorldRectWithExtend(PlayerBulletMaxZone));
 		EnemisBulletBound.Resize(Cam.WorldRectWithExtend(EnemisBulletMaxZone));
