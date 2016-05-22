@@ -9,7 +9,7 @@ using Pseudo.Injection;
 public class LeapModule : ModuleBase
 {
 	[Header("Uses 'MotionY' action.")]
-	public MotionBase ShipMotion;
+	public Transform Ship;
 	public Lane StartLane;
 	public LeapTarget LeapPreview;
 	public float LeapDelay = 0.5f;
@@ -24,7 +24,7 @@ public class LeapModule : ModuleBase
 	{
 		base.Start();
 
-		currentLane = StartLane;
+		SetLane(StartLane);
 	}
 
 	public override void UpdateModule(ActivatorBase owner)
@@ -88,8 +88,14 @@ public class LeapModule : ModuleBase
 	void EndLeap()
 	{
 		leapCounter = 0f;
-		currentLane = LeapPreview.Lane;
-		transform.root.position = LeapPreview.transform.position;
+		SetLane(LeapPreview.Lane);
+		//Ship.position = LeapPreview.transform.position;
 		HidePreview();
+	}
+
+	void SetLane(Lane lane)
+	{
+		currentLane = lane;
+		Ship.SetPosition(lane.transform.position, Axes.Y);
 	}
 }
