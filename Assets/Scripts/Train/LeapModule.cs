@@ -89,7 +89,6 @@ public class LeapModule : ModuleBase
 	{
 		leapCounter = 0f;
 		SetLane(LeapPreview.Lane);
-		//Ship.position = LeapPreview.transform.position;
 		HidePreview();
 	}
 
