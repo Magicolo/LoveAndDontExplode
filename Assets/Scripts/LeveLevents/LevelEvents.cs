@@ -32,7 +32,15 @@ public class LevelEvents : MonoBehaviour
 		for (int i = 0; i < LevelTime; i += 10)
 		{
 			Vector3 v = downLeft + new Vector3(i, 0);
-			Gizmos.DrawLine(v, v + new Vector3(0, 2));
+			Gizmos.DrawLine(v, v + new Vector3(0, LevelHeight));
+			DrawUtility.DrawText(v, i + "s");
+		}
+
+		Gizmos.color = new Color(0, 1, 0, 0.5f);
+		for (int i = 5; i < LevelTime; i += 10)
+		{
+			Vector3 v = downLeft + new Vector3(i, 0);
+			Gizmos.DrawLine(v, v + new Vector3(0, LevelHeight));
 			DrawUtility.DrawText(v, i + "s");
 		}
 
