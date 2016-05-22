@@ -7,16 +7,8 @@ using Pseudo;
 
 public class WeaponModule : ModuleBase
 {
-
 	public Turret Turret;
-
-	void Update()
-	{
-		if (owner == null)
-			return;
-
-		UpdateModule(owner);
-	}
+	public TimeComponent Time;
 
 	public override void UpdateModule(ActivatorBase owner)
 	{
@@ -29,7 +21,7 @@ public class WeaponModule : ModuleBase
 		float direction = -owner.Input.GetAction("MotionX").GetAxis();
 		if (direction != 0)
 		{
-			float rotation = direction * Turret.RotationSpeed * GetComponentInParent<TimeComponent>().DeltaTime;
+			float rotation = direction * Turret.RotationSpeed * Time.FixedDeltaTime;
 			float z = Turret.transform.rotation.eulerAngles.z + rotation;
 			z = z.Clamp(Turret.AngleRange);
 			Turret.transform.rotation = Quaternion.Euler(0, 0, z);

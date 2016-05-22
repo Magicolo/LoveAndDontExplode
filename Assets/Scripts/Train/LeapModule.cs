@@ -73,7 +73,7 @@ public class LeapModule : ModuleBase
 
 	void UpdateLeap()
 	{
-		leapCounter -= Time.DeltaTime;
+		leapCounter -= Time.FixedDeltaTime;
 
 		if (leapCounter <= 0f)
 			EndLeap();
