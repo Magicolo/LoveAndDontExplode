@@ -113,7 +113,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 0
@@ -126,7 +125,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 4
@@ -139,7 +137,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -501.24, y: -86.1, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 401926}
   - {fileID: 436474}
@@ -157,7 +154,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 1
@@ -170,7 +166,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 3
@@ -183,7 +178,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 2
@@ -249,7 +243,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e2f9d77350576439bab771e86143a7, type: 3}
   m_Name: 
@@ -326,9 +320,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11439978, guid: b95854f66896efe4583285d40141b018, type: 2}
   WeaponRoot: {fileID: 493730}
-  Cooldown: 2.83
-  Ammo: 2
-  FireRate: 0.76
+  Cooldown:
+    min: 0
+    max: 0
+  Ammo:
+    min: 1
+    max: 1
+  FireRate:
+    min: 0.5
+    max: 1
   currentAmmo: 0
 --- !u!114 &11491198
 MonoBehaviour:
@@ -342,7 +342,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 11416100}
-  Epsilon: 0
+  Epsilon: 0.3
+  ActivateControler:
+  - {fileID: 11427118}
+  DeactivateControlers: []
 --- !u!198 &19813954
 ParticleSystem:
   m_ObjectHideFlags: 1
