@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public class BirdFlockFormation : FormationComponent
+public class BirdFlockFormation : FormationBase
 {
 
 	[Min(0), Max(360)]

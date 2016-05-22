@@ -13,6 +13,7 @@ GameObject:
   - 114: {fileID: 11497234}
   - 58: {fileID: 5870094}
   - 114: {fileID: 11453892}
+  - 114: {fileID: 11434364}
   m_Layer: 0
   m_Name: GravityBullet
   m_TagString: Bullet
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.373455, y: 2.1330187, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438872}
@@ -91,7 +92,19 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.5
+--- !u!114 &11434364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5afd2611c2dd0a4bbc9bec4e02864d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount: 5
 --- !u!114 &11440122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,7 +177,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f1285a737de7c1d4188380e2f85e7fe2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65f5164a09b372f40adbac1e3605f37c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

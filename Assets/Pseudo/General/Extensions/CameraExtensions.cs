@@ -42,6 +42,16 @@ namespace Pseudo
 			return Rect.MinMaxRect(min.x, min.y, max.x, max.y);
 		}
 
+		public static Rect WorldRectWithExtend(this Camera camera, float extend, float depth = 0f)
+		{
+			float distance = depth - camera.transform.position.z;
+
+			var min = camera.ViewportToWorldPoint(new Vector3(0f - extend, 0f - extend, distance));
+			var max = camera.ViewportToWorldPoint(new Vector3(1f + extend, 1f + extend, distance));
+
+			return Rect.MinMaxRect(min.x, min.y, max.x, max.y);
+		}
+
 		public static Vector3 ClampToScreen(this Camera camera, Vector3 worldPoint, Vector2 margin = default(Vector2))
 		{
 			var rect = camera.WorldRect(worldPoint.z);

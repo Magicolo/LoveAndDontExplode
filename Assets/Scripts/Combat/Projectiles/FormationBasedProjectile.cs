@@ -8,7 +8,7 @@ using Pseudo;
 public class FormationBasedProjectile : ProjectileBase
 {
 
-	public FormationComponent Formation;
+	public FormationBase Formation;
 	public GameObject Prefab;
 
 	public int NbSpawn;

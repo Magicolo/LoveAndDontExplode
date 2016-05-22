@@ -7,8 +7,10 @@ using Pseudo;
 
 public abstract class DamagerBase : PMonoBehaviour
 {
-	public virtual bool Damage(Damageable damageable, float damageAmount)
+	public DamageInfo DamageToCause;
+
+	public virtual bool Damage(DamageableBase damageable, DamageInfo info)
 	{
-		return damageable.Damage(damageAmount);
+		return damageable.Damage(info);
 	}
 }
