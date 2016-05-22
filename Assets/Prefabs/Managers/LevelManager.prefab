@@ -58,6 +58,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 449094}
   - 114: {fileID: 11422144}
+  - 114: {fileID: 11463834}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -122,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138616}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -150, z: 0}
+  m_LocalPosition: {x: 0, y: -150, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -136,7 +137,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -205,7 +206,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 150, z: 0}
+  m_LocalPosition: {x: 0, y: 150, z: 0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -337,6 +338,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e3edb737680914e8f912b963c66212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationSpeed: 5
+  Renderer: {fileID: 2328962}
+  Time: {fileID: 11463834}
+--- !u!114 &11463834
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time:
+    channel: 3
+    timeScale: 1
 --- !u!114 &11481688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e3edb737680914e8f912b963c66212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationSpeed: 5
+  Renderer: {fileID: 2358504}
+  Time: {fileID: 11463834}
 --- !u!114 &11498042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -359,6 +380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e3edb737680914e8f912b963c66212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationSpeed: 5
+  Renderer: {fileID: 2307028}
+  Time: {fileID: 11463834}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
