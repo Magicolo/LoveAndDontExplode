@@ -11,7 +11,7 @@ public class TriggerDamager : DamagerBase
 
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		var damageable = collision.GetComponent<Damageable>(HierarchyScopes.Self | HierarchyScopes.Ancestors);
+		var damageable = collision.GetComponent<DamageableBase>(HierarchyScopes.Self | HierarchyScopes.Ancestors);
 
 		if (damageable != null)
 			Damage(damageable, DamageAmount);
