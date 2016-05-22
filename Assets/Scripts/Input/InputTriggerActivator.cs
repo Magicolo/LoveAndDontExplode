@@ -25,11 +25,7 @@ public class InputTriggerActivator : ActivatorBase
 			}
 			// Activation is successful. Move to activateable and deactivate motion.
 			else if (activateable.Activate(this))
-			{
-				transform.position = activateable.transform.position;
-				transform.rotation = activateable.transform.rotation;
 				freezer = gameObject.AddComponent<FreezeMotion>();
-			}
 		}
 	}
 

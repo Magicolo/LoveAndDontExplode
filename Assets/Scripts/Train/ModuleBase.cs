@@ -7,7 +7,17 @@ using Pseudo;
 
 public abstract class ModuleBase : PMonoBehaviour
 {
-	protected ActivatorBase owner;
+	ActivatorBase owner;
+
+	void FixedUpdate()
+	{
+		if (owner == null)
+			return;
+
+		owner.transform.position = transform.position;
+		owner.transform.rotation = transform.rotation;
+		UpdateModule(owner);
+	}
 
 	protected virtual void OnActivated(ActivatorBase owner)
 	{

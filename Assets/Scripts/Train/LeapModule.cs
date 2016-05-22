@@ -27,14 +27,6 @@ public class LeapModule : ModuleBase
 		currentLane = StartLane;
 	}
 
-	void Update()
-	{
-		if (owner == null)
-			return;
-
-		UpdateModule(owner);
-	}
-
 	public override void UpdateModule(ActivatorBase owner)
 	{
 		var input = owner.Input.GetAction("MotionY").GetAxis();
