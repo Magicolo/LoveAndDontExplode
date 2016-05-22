@@ -5,8 +5,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-public abstract class ControllerBase : PMonoBehaviour
+public class Turret : MonoBehaviour
 {
+	public MinMax AngleRange;
+	public float RotationSpeed;
 
-	protected Camera cam { get { return Camera.main; } }
+	public WeaponBase Weapon;
+
 }

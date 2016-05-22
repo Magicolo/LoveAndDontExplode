@@ -23,8 +23,8 @@ public class AccelerationVeloMotionControler : ControllerBase
 	{
 		base.Start();
 		velocity = StartingVelocity;
-		xa = XAcceleration.GetRandom();
-		ya = YAcceleration.GetRandom();
+		xa = XAcceleration.GetRandom(ProbabilityDistributions.InversedGaussian);
+		ya = YAcceleration.GetRandom(ProbabilityDistributions.InversedGaussian);
 	}
 	void FixedUpdate()
 	{
