@@ -31,10 +31,10 @@ public class InputTriggerActivator : ActivatorBase
 
 	void OnTriggerExit2D(Collider2D collision)
 	{
-		activateable = collision.GetComponent<Activateable>(HierarchyScopes.Self | HierarchyScopes.Parent);
-
 		if (activateable != null)
 			activateable.ExitRange(this);
+
+		activateable = null;
 	}
 
 	public override bool Activate()

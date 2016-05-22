@@ -66,5 +66,12 @@ namespace Pseudo.Editor.Internal
 
 			End();
 		}
+
+		public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+		{
+			base.GetPropertyHeight(property, label);
+
+			return lineHeight;
+		}
 	}
 }
