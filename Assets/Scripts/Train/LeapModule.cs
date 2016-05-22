@@ -89,7 +89,7 @@ public class LeapModule : ModuleBase
 	{
 		leapCounter = 0f;
 		currentLane = LeapPreview.Lane;
-		ShipMotion.MoveTo(LeapPreview.transform.position, true);
+		transform.root.position = LeapPreview.transform.position;
 		HidePreview();
 	}
 }
