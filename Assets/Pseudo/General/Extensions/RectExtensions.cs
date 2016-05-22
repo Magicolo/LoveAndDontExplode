@@ -107,7 +107,7 @@ namespace Pseudo
 
 		public static Vector2 BottomRight(this Rect rect)
 		{
-			return new Vector2(rect.xMax, rect.yMin);
+			return new Vector2(rect.xMax, rect.yMax);
 		}
 
 		public static Vector2 GetRandomPoint(this Rect rect)

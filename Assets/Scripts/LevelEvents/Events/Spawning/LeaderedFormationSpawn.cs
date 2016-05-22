@@ -7,7 +7,8 @@ using Pseudo;
 using Pseudo.Injection;
 
 [RequireComponent(typeof(TimeComponent))]
-public class FormationSpawn : SpawnnerEvent
+
+public class LeaderedFormationSpawn : SpawnnerEvent
 {
 	[Inject(Cameras.Main)]
 	Camera Cam;
@@ -18,6 +19,7 @@ public class FormationSpawn : SpawnnerEvent
 	[Min(0)]
 	public int NbToSpawn;
 
+	public FormationLeader Leader;
 	public GameObject PrefabToSpawn;
 	public FormationBase Formation;
 
@@ -35,12 +37,30 @@ public class FormationSpawn : SpawnnerEvent
 			Debug.LogError("Yo J'ai besoin dun formation.");
 			return;
 		}
+		if (Leader == null)
+		{
+			Debug.LogError("Yo J'ai besoin dun leader.");
+			return;
+		}
+
+		GameObject leaderGo = Spawn(Leader.gameObject, Cam, RatioXStart);
+		FormationLeader leader = leaderGo.GetComponent<FormationLeader>();
+		leader.Formation = Formation;
+		leader.FormationCount = NbToSpawn;
 
 		for (int i = 0; i < NbToSpawn; i++)
 		{
 			GameObject go = Spawn(PrefabToSpawn, Cam, RatioXStart);
 			Vector3 p = Formation.GetFormationPosition(i, NbToSpawn);
 			go.transform.position += p;
+
+			var fmc = go.GetComponent<FormationMotionControler>();
+			if (fmc)
+			{
+				fmc.FormationLeader = leader;
+				fmc.formatId = i;
+			}
+
 		}
 
 

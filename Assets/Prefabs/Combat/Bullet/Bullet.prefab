@@ -27,9 +27,9 @@ GameObject:
   - 50: {fileID: 5087742}
   - 114: {fileID: 11489862}
   - 114: {fileID: 11476150}
-  - 114: {fileID: 11465392}
   - 58: {fileID: 5883296}
-  - 114: {fileID: 11418490}
+  - 114: {fileID: 11489622}
+  - 114: {fileID: 11458418}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.626545, y: 2.1330187, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489908}
@@ -85,7 +85,7 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140362}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -93,22 +93,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
---- !u!114 &11418490
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140362}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 893b864043c7692459d5168360aeb328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Motion: {fileID: 11476150}
-  Frequency: 1
-  Amplitude: 1
-  Offset: 0
---- !u!114 &11465392
+--- !u!114 &11458418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 140362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 737c54245ad629a408cbe87195a8836e, type: 3}
+  m_Script: {fileID: 11500000, guid: 48e30f5c5cc01b149be431bfd47a6aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Motion: {fileID: 11476150}
@@ -133,6 +118,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 32
   RotateSpeed: 5
+--- !u!114 &11489622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5afd2611c2dd0a4bbc9bec4e02864d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount: 5
 --- !u!114 &11489862
 MonoBehaviour:
   m_ObjectHideFlags: 1
