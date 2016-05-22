@@ -888,13 +888,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 476494}
   - 120: {fileID: 12025784}
+  - 114: {fileID: 11442448}
   m_Layer: 8
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &190932
 GameObject:
   m_ObjectHideFlags: 1
@@ -2326,6 +2327,26 @@ MonoBehaviour:
     Ratio: 0
   Renderer: {fileID: 21277404}
   Time: {fileID: 11435392}
+--- !u!114 &11442448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ca1f699555ffd40b074f48c9406488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageToCause:
+    Damage: 5
+    Sources: 1
+    Types: 2
+  BoxSize: {x: 13, y: 1600}
+  Time: {fileID: 11435392}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &11443192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2495,6 +2516,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DamageableBy:
+    Damage: 0
+    Sources: 2
+    Types: 3
   MaxHealth: 100
 --- !u!114 &11471672
 MonoBehaviour:
