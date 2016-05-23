@@ -558,6 +558,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11422144, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
+      propertyPath: Ships.Array.data[0]
+      value: 
+      objectReference: {fileID: 2029794716}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
   m_IsPrefabParent: 0
@@ -2734,7 +2738,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476936, guid: 74597bda3785643a6807e28ebdcc0e95, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 103218, guid: 74597bda3785643a6807e28ebdcc0e95, type: 2}
       propertyPath: m_Name
@@ -6960,7 +6964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 476936, guid: 74597bda3785643a6807e28ebdcc0e95, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 103218, guid: 74597bda3785643a6807e28ebdcc0e95, type: 2}
       propertyPath: m_Name
@@ -11964,6 +11968,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 476936, guid: 74597bda3785643a6807e28ebdcc0e95, type: 2}
   m_PrefabInternal: {fileID: 2028217600}
+--- !u!114 &2029794716 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11469788, guid: c438f404924017e4485d7cb6f6e6129b,
+    type: 2}
+  m_PrefabInternal: {fileID: 101689422}
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
 --- !u!1 &2067068435
 GameObject:
   m_ObjectHideFlags: 0

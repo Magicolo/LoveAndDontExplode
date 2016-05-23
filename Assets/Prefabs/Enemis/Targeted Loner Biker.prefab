@@ -376,12 +376,12 @@ MonoBehaviour:
   Projectile: {fileID: 11439978, guid: b95854f66896efe4583285d40141b018, type: 2}
   WeaponRoot: {fileID: 493730}
   Cooldown:
-    min: 0
-    max: 0
+    min: 3
+    max: 5
   Ammo:
-    min: 1
-    max: 1
-  FireRate: NaN
+    min: 2
+    max: 2
+  FireRate: 0.7
   currentAmmo: 0
 --- !u!114 &11489648
 MonoBehaviour:
