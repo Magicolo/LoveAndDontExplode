@@ -95,6 +95,7 @@ public class LeapModule : ModuleBase
 	void SetLane(Lane lane)
 	{
 		currentLane = lane;
-		Ship.SetPosition(lane.transform.position, Axes.Y);
+		if (lane != null)
+			Ship.SetPosition(lane.transform.position, Axes.Y);
 	}
 }
