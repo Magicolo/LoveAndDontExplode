@@ -323,6 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938c3bd7a68c56f4c8982ba93f53d9a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Ships:
+  - {fileID: 0}
   Lanes:
   - {fileID: 11453852}
   - {fileID: 11498042}
