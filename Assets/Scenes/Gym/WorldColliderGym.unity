@@ -228,6 +228,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11477804, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+      propertyPath: StartLane
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_IsPrefabParent: 0
@@ -342,8 +346,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 449094, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11422144, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
+      propertyPath: Ships.Array.data[0]
+      value: 
+      objectReference: {fileID: 1397481210}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
   m_IsPrefabParent: 0
@@ -1518,6 +1526,12 @@ Transform:
   - {fileID: 1564530577}
   m_Father: {fileID: 1765510538}
   m_RootOrder: 1
+--- !u!114 &1397481210 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11469788, guid: c438f404924017e4485d7cb6f6e6129b,
+    type: 2}
+  m_PrefabInternal: {fileID: 101689422}
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
 --- !u!1 &1413724123 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 140532, guid: fda475fbf3576014bbac05c6f8fd9ec7, type: 2}
@@ -1776,6 +1790,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11437076, guid: 5f9a0f22b6a4411429889dd9564dd81d, type: 2}
+      propertyPath: Damping
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f9a0f22b6a4411429889dd9564dd81d, type: 2}
   m_IsPrefabParent: 0
@@ -1807,7 +1825,7 @@ Transform:
   - {fileID: 1324792491}
   - {fileID: 1369594501}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &1795983841 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11435392, guid: c438f404924017e4485d7cb6f6e6129b,

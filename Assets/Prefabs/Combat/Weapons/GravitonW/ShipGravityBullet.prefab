@@ -37,6 +37,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &181932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 477554}
+  - 114: {fileID: 11463892}
+  - 114: {fileID: 11437076}
+  m_Layer: 9
+  m_Name: GoBackToCenter2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!1 &188646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 492134}
+  - 114: {fileID: 11428758}
+  - 114: {fileID: 11499746}
+  m_Layer: 9
+  m_Name: GoBackToCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &199584
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,6 +99,8 @@ Transform:
   m_Children:
   - {fileID: 438872}
   - {fileID: 493124}
+  - {fileID: 492134}
+  - {fileID: 477554}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &438872
@@ -79,6 +115,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400444}
   m_RootOrder: 0
+--- !u!4 &477554
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181932}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400444}
+  m_RootOrder: 3
+--- !u!4 &492134
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400444}
+  m_RootOrder: 2
 --- !u!4 &493124
 Transform:
   m_ObjectHideFlags: 1
@@ -135,7 +195,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Controller: {fileID: 11487274}
   Time: {fileID: 11440122}
-  DeactivateTime: 3
+  DeactivateTime: 6
+--- !u!114 &11428758
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76117de951b867b4daa03a0fc9eca090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 11499746}
+  Time: {fileID: 11440122}
+  DeactivateTime: 4
 --- !u!114 &11434364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,6 +225,21 @@ MonoBehaviour:
     Damage: 4
     Sources: 1
     Types: 1
+--- !u!114 &11437076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181932}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5a8e792b91a58449b636b44fe85dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Motion: {fileID: 11497234}
+  Target: {x: 8888, y: 0, z: 0}
+  Damping: 0.1
+  LockedAxes: 1
 --- !u!114 &11440122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,8 +252,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time:
-    channel: 4
+    channel: 3
     timeScale: 1
+--- !u!114 &11463892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76117de951b867b4daa03a0fc9eca090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 11437076}
+  Time: {fileID: 11440122}
+  DeactivateTime: 4
 --- !u!114 &11487274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,7 +283,7 @@ MonoBehaviour:
   StartingVelocity: {x: -1, y: 0}
   XAcceleration:
     min: 0.8
-    max: 0.9
+    max: 0.85
   YAcceleration:
     min: -1
     max: 1
@@ -188,8 +291,9 @@ MonoBehaviour:
     min: 0
     max: 0
   YAccelerationVelocity:
-    min: -4
-    max: -4
+    min: 0
+    max: 0
+  Time: {fileID: 11440122}
 --- !u!114 &11497234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,6 +308,18 @@ MonoBehaviour:
   MoveSpeed: 100
   RotateSpeed: 20
   Accelerate: 0
+--- !u!114 &11499746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188646}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e30f5c5cc01b149be431bfd47a6aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Motion: {fileID: 11497234}
 --- !u!212 &21245182
 SpriteRenderer:
   m_ObjectHideFlags: 1

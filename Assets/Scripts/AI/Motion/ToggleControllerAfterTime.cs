@@ -21,9 +21,10 @@ public class ToggleControllerAfterTime : MonoBehaviour
 
 	void Update()
 	{
-		if (t > Time.Time)
+		if (Time.Time > t)
 		{
 			Controller.enabled = !Controller.enabled;
+			enabled = false;
 		}
 	}
 }

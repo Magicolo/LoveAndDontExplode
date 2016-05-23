@@ -5,7 +5,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-[RequireComponent(typeof(TimeComponent))]
 public class StraightMotionControler : ControllerBase
 {
 	public MotionBase Motion;
@@ -13,5 +12,6 @@ public class StraightMotionControler : ControllerBase
 	void FixedUpdate()
 	{
 		Motion.Move(transform.right);
+		Motion.RotateTo(0);
 	}
 }

@@ -23,7 +23,7 @@ public class AccelerationVeloMotionControler : ControllerBase
 	float xav;
 	float yav;
 
-	TimeComponent Time { get { return GetComponent<TimeComponent>(); } }
+	public TimeComponent Time;
 
 	override protected void Start()
 	{
@@ -31,8 +31,8 @@ public class AccelerationVeloMotionControler : ControllerBase
 		velocity = StartingVelocity;
 		xa = XAcceleration.GetRandom(ProbabilityDistributions.InversedGaussian);
 		ya = YAcceleration.GetRandom(ProbabilityDistributions.InversedGaussian);
-		xa = XAcceleration.GetRandom() * Mathf.Sign(xa);
-		ya = YAcceleration.GetRandom() * Mathf.Sign(ya);
+		//xav = XAcceleration.GetRandom() * Mathf.Sign(xa);
+		//yav = YAcceleration.GetRandom() * Mathf.Sign(ya);
 
 		transform.rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan2(velocity.y, velocity.x));
 	}
