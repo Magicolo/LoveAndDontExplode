@@ -17,23 +17,21 @@ namespace Pseudo
 		OnStateExit
 	}
 
-	public class StateMachine : ComponentBehaviourBase, IMessageable
+	public class StateMachine : PMonoBehaviour, IMessageable
 	{
 		[Serializable]
 		public struct StateData
 		{
 			public Message Message;
-			public EntityBehaviour State;
+			public GameObject State;
 		}
 
 		public StateData[] States = new StateData[0];
 
-		EntityBehaviour currentState;
+		GameObject currentState;
 
-		public override void OnAdded()
+		void OnCreate()
 		{
-			base.OnAdded();
-
 			for (int i = 0; i < States.Length; i++)
 			{
 				var state = States[i];
@@ -43,11 +41,11 @@ namespace Pseudo
 			}
 		}
 
-		void SwitchState(EntityBehaviour state)
+		void SwitchState(GameObject state)
 		{
 			if (currentState != null)
 			{
-				Entity.SendMessage(StateMachineMessages.OnStateExit, HierarchyScopes.Children | HierarchyScopes.Self);
+				SendMessage("OnStateExit", HierarchyScopes.Children | HierarchyScopes.Self);
 				currentState.gameObject.SetActive(false);
 			}
 
@@ -56,7 +54,7 @@ namespace Pseudo
 			if (currentState != null)
 			{
 				currentState.gameObject.SetActive(true);
-				Entity.SendMessage(StateMachineMessages.OnStateEnter, HierarchyScopes.Children | HierarchyScopes.Self);
+				SendMessage("OnStateEnter", HierarchyScopes.Children | HierarchyScopes.Self);
 			}
 		}
 

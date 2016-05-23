@@ -22,10 +22,8 @@ public class WeaponModule : ModuleBase
 		if (direction != 0)
 		{
 			float rotation = direction * Turret.RotationSpeed * Time.FixedDeltaTime;
-			float z = Turret.transform.rotation.eulerAngles.z + rotation;
-			z = z.Clamp(Turret.AngleRange);
-			Turret.transform.rotation = Quaternion.Euler(0, 0, z);
-
+			float z = (Turret.transform.rotation.eulerAngles.z + rotation).Clamp(Turret.AngleRange);
+			Turret.transform.SetEulerAngles(z, Axes.Z);
 		}
 	}
 }

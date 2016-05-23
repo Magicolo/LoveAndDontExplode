@@ -8,8 +8,6 @@ using Pseudo;
 public class Turret : MonoBehaviour
 {
 	public MinMax AngleRange;
-	public float RotationSpeed;
-
+	public float RotationSpeed = 60f;
 	public WeaponBase Weapon;
-
 }
