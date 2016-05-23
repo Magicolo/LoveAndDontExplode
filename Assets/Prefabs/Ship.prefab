@@ -134,7 +134,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 427338}
-  - 114: {fileID: 11483396}
   - 114: {fileID: 11454644}
   m_Layer: 8
   m_Name: GravityThingWeapon
@@ -1752,10 +1751,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11439978, guid: eb5a4817397bd9e4a9dc274c31b8c33c, type: 2}
   WeaponRoot: {fileID: 428494}
+  Cooldown:
+    min: 0
+    max: 0
+  Ammo:
+    min: 1
+    max: 1
+  FireRate:
+    min: 0.5
+    max: 1
   Time: {fileID: 11435392}
-  Cooldown: 0
-  Ammo: 1
-  FireRate: 0.25
   currentAmmo: 0
 --- !u!114 &11454644
 MonoBehaviour:
@@ -1770,10 +1775,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 11461454, guid: 5d96258f814cda74db0575dfad6a3bda, type: 2}
   WeaponRoot: {fileID: 453452}
+  Cooldown:
+    min: 0
+    max: 0
+  Ammo:
+    min: 1
+    max: 1
+  FireRate:
+    min: 0.5
+    max: 1
   Time: {fileID: 11435392}
-  Cooldown: 0.001
-  Ammo: 1
-  FireRate: 1
   currentAmmo: 0
 --- !u!114 &11456214
 MonoBehaviour:
@@ -1892,20 +1903,6 @@ MonoBehaviour:
     Ratio: 0
   Renderer: {fileID: 21290680}
   Time: {fileID: 11435392}
---- !u!114 &11483396
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-    channel: 0
-    timeScale: 1
 --- !u!114 &11486770
 MonoBehaviour:
   m_ObjectHideFlags: 1
