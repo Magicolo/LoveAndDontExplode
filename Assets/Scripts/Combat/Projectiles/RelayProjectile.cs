@@ -11,13 +11,16 @@ public class RelayProjectile : ProjectileBase
 	public ProjectileInfo[] Projectiles;
 
 
-	public override void Fire(Vector3 position, float angle)
+	public override GameObject[] Fire(Vector3 position, float angle)
 	{
+		List<GameObject> bullets = new List<GameObject>();
 		for (int i = 0; i < Projectiles.Length; i++)
 		{
 			var p = Projectiles[i];
-			p.Projectile.Fire(position + p.PositionOffset, angle + p.AngleOffset);
+			var bs = p.Projectile.Fire(position + p.PositionOffset, angle + p.AngleOffset);
+			bullets.AddRange(bs);
 		}
+		return bullets.ToArray();
 	}
 }
 

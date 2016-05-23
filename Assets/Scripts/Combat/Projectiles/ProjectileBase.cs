@@ -7,7 +7,7 @@ using Pseudo;
 
 public abstract class ProjectileBase : MonoBehaviour
 {
-	public abstract void Fire(Vector3 position, float angle);
+	public abstract GameObject[] Fire(Vector3 position, float angle);
 
 
 	protected GameObject Spawn(GameObject prefab, Vector3 position)

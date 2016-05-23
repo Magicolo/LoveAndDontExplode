@@ -5,10 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Pseudo;
 
-[RequireComponent(typeof(TimeComponent))]
 public class SimpleWeapon : WeaponBase
 {
-
+	public TimeComponent Time;
 	public ProjectileBase Projectile;
 	public Transform WeaponRoot;
 
@@ -19,11 +18,11 @@ public class SimpleWeapon : WeaponBase
 	[Disable]
 	public float currentAmmo;
 
-	float t;
+	protected float t;
 
 	public override bool CanFire()
 	{
-		return GetComponent<TimeComponent>().Time > t;
+		return Time.Time > t;
 	}
 
 	public override void Fire()
@@ -39,11 +38,11 @@ public class SimpleWeapon : WeaponBase
 			Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
 			if (currentAmmo == 0)
 			{
-				t = GetComponent<TimeComponent>().Time + Cooldown.GetRandom() + FireRate.GetRandom();
+				t = Time.Time + Cooldown.GetRandom() + FireRate.GetRandom();
 			}
 			else
 			{
-				t = GetComponent<TimeComponent>().Time + FireRate.GetRandom();
+				t = Time.Time + FireRate.GetRandom();
 			}
 		}
 	}

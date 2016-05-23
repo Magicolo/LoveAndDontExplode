@@ -30,6 +30,12 @@ namespace Pseudo
 			return PRandom.Range(min, max, distribution);
 		}
 
+		public float GetAtT(float t)
+		{
+			return Mathf.Clamp((max - min) * t + min, min, max);
+		}
+
+
 		public override string ToString()
 		{
 			return string.Format("{0}({1}, {2})", GetType().Name, min, max);

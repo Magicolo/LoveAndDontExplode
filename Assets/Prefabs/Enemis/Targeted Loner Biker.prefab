@@ -78,7 +78,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493730}
-  - 114: {fileID: 11421606}
   - 114: {fileID: 11468868}
   - 114: {fileID: 11406284}
   m_Layer: 0
@@ -223,20 +222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetKey: Motion
   Target: {fileID: 0}
---- !u!114 &11421606
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-    channel: 0
-    timeScale: 1
 --- !u!114 &11427118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,6 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Time: {fileID: 11468282}
   Projectile: {fileID: 11439978, guid: b95854f66896efe4583285d40141b018, type: 2}
   WeaponRoot: {fileID: 493730}
   Cooldown:
