@@ -21,8 +21,9 @@ public class LevelEventActivator : MonoBehaviour
 
 	private void activateEvents()
 	{
-		foreach (var levelEvent in GetComponents<ILevelEvent>())
-			levelEvent.Activate();
+		foreach (var levelEvent in GetComponentsInChildren<ILevelEvent>())
+			if (levelEvent.enabled)
+				levelEvent.Activate();
 
 		activated = true;
 	}
@@ -35,7 +36,7 @@ public class LevelEventActivator : MonoBehaviour
 			Gizmos.color = Color.red;
 			Vector3 halfScale = new Vector3(transform.localScale.x / 2, transform.localScale.y / 2, 0);
 			Gizmos.DrawLine(transform.position - halfScale, transform.position + halfScale);
-			DrawUtility.DrawText(transform.position, "It's outside Of Time",Color.red);
+			DrawUtility.DrawText(transform.position, "It's outside Of Time", Color.red);
 
 		}
 		if (activated)

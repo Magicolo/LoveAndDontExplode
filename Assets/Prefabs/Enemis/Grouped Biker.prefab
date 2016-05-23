@@ -63,6 +63,7 @@ GameObject:
   - 114: {fileID: 11425360}
   - 114: {fileID: 11460712}
   - 114: {fileID: 11465570}
+  - 114: {fileID: 11475870}
   m_Layer: 9
   m_Name: Grouped Biker
   m_TagString: Enemis
@@ -129,7 +130,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 4
@@ -142,7 +142,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 0
@@ -155,7 +154,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 1
@@ -168,7 +166,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 3
@@ -181,7 +178,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 5
@@ -194,7 +190,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 441812}
   - {fileID: 464884}
@@ -213,7 +208,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 2
@@ -243,7 +237,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -267,14 +261,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180324}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e2f9d77350576439bab771e86143a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AttackingZone:
-    min: 0.2
-    max: 0.8
+    min: 0.05
+    max: 0.95
   Weapons:
   - {fileID: 11423476}
 --- !u!114 &11423476
@@ -293,11 +287,11 @@ MonoBehaviour:
   WeaponRoot: {fileID: 486292}
   Cooldown:
     min: 3
-    max: 4
+    max: 5
   Ammo:
-    min: 3
-    max: 3
-  FireRate: NaN
+    min: 2
+    max: 2
+  FireRate: 0.7
   currentAmmo: 0
 --- !u!114 &11425360
 MonoBehaviour:
@@ -386,6 +380,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetKey: Motion
   Target: {fileID: 0}
+--- !u!114 &11475870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f4a13f283d01b43996def5271da0db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 11421324}
+  Delay: 5
+  Time: {fileID: 11445828}
 --- !u!114 &11499448
 MonoBehaviour:
   m_ObjectHideFlags: 1

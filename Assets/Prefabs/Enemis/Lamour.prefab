@@ -112,7 +112,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 1
@@ -125,7 +124,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 0
@@ -138,7 +136,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -0.5, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 2
@@ -151,7 +148,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 414924}
   - {fileID: 405102}
@@ -169,7 +165,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -0.5, y: 6.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 3
@@ -182,7 +177,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 4
@@ -245,8 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackingZone:
-    min: 0.2
-    max: 0.8
+    min: 0.05
+    max: 0.95
   Weapons:
   - {fileID: 11456970}
   - {fileID: 11484800}
@@ -281,12 +275,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motion: {fileID: 11465644}
   XRange:
-    min: 0
-    max: 0
+    min: 0.2
+    max: 0.8
   HoldPointTime:
-    min: 0
-    max: 0
-  goingRight: 0
+    min: 2
+    max: 3
+  goingRight: 1
 --- !u!114 &11456970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,9 +299,9 @@ MonoBehaviour:
     min: 3
     max: 4
   Ammo:
-    min: 100
-    max: 100
-  FireRate: NaN
+    min: 23
+    max: 26
+  FireRate: 0.05
   currentAmmo: 0
 --- !u!114 &11465644
 MonoBehaviour:
@@ -355,9 +349,9 @@ MonoBehaviour:
     min: 3
     max: 4
   Ammo:
-    min: 100
-    max: 100
-  FireRate: NaN
+    min: 23
+    max: 26
+  FireRate: 0.05
   currentAmmo: 0
 --- !u!198 &19859146
 ParticleSystem:

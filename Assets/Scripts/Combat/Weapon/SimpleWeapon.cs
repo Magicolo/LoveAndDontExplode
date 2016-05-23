@@ -34,7 +34,7 @@ public class SimpleWeapon : WeaponBase
 	{
 		if (reloading)
 		{
-			if (CanFire())
+			if (Time.Time > t)
 			{
 				reloading = false;
 				currentAmmo = currentMaxAmmo;
@@ -46,7 +46,7 @@ public class SimpleWeapon : WeaponBase
 
 	public override bool CanFire()
 	{
-		return Time.Time > t;
+		return Time.Time > t && !reloading;
 	}
 
 	public override void Fire()
