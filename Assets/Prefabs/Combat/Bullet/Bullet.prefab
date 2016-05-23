@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time:
-    channel: 0
+    channel: 3
     timeScale: 1
 --- !u!212 &21245604
 SpriteRenderer:

@@ -1749,6 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Time: {fileID: 11435392}
   Projectile: {fileID: 11439978, guid: eb5a4817397bd9e4a9dc274c31b8c33c, type: 2}
   WeaponRoot: {fileID: 428494}
   Cooldown:
@@ -1758,9 +1759,8 @@ MonoBehaviour:
     min: 1
     max: 1
   FireRate:
-    min: 0.5
-    max: 1
-  Time: {fileID: 11435392}
+    min: 0.25
+    max: 0.25
   currentAmmo: 0
 --- !u!114 &11454644
 MonoBehaviour:
@@ -1773,6 +1773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Time: {fileID: 11435392}
   Projectile: {fileID: 11461454, guid: 5d96258f814cda74db0575dfad6a3bda, type: 2}
   WeaponRoot: {fileID: 453452}
   Cooldown:
@@ -1784,7 +1785,6 @@ MonoBehaviour:
   FireRate:
     min: 0.5
     max: 1
-  Time: {fileID: 11435392}
   currentAmmo: 0
 --- !u!114 &11456214
 MonoBehaviour:

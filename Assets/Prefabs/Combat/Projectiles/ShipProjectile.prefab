@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Formation: {fileID: 11479252}
-  Prefab: {fileID: 140362, guid: 01990df8cfad82a48839dbf71ce9aaa4, type: 2}
+  Prefab: {fileID: 140362, guid: cb8485627adf1ba449b9ce19f00f8775, type: 2}
   NbSpawn: 3
   RotateTowardFormation: 1
 --- !u!114 &11479252

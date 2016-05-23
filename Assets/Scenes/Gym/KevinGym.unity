@@ -222,6 +222,11 @@ Prefab:
       propertyPath: StartLane
       value: 
       objectReference: {fileID: 238401176}
+    - target: {fileID: 11454644, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+      propertyPath: Projectile
+      value: 
+      objectReference: {fileID: 11461454, guid: 63898d887e0d9804b885f48c377d1d37,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_IsPrefabParent: 0
