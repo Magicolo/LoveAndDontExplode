@@ -129,16 +129,16 @@ Material:
         second: 0
       data:
         first:
-          name: _CoolDownThickness
-        second: 0.1
+          name: _CoolDownRatio
+        second: 0.5
       data:
         first:
-          name: _CoolDownRatio
-        second: 0.22
+          name: _CoolDownThickness
+        second: 0.2
       data:
         first:
           name: _AmmoRatio
-        second: 0.69
+        second: 0.75
     m_Colors:
       data:
         first:
@@ -151,12 +151,12 @@ Material:
       data:
         first:
           name: _CoolDownColour
-        second: {r: 0.41176468, g: 1, b: 1, a: 1}
+        second: {r: 0.5019608, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _AmmoColour
+        second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
           name: _BulletColour
         second: {r: 1, g: 0.04411763, b: 0.04411763, a: 1}
-      data:
-        first:
-          name: _AmmoColour
-        second: {r: 0.89705884, g: 0.013192055, b: 0.013192055, a: 1}
