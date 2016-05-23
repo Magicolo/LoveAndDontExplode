@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 437470}
   - 114: {fileID: 11461454}
   m_Layer: 0
-  m_Name: RearUltimateSplitter
+  m_Name: ShipRearUltimateSplitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,11 +40,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectiles:
-  - Projectile: {fileID: 11411810, guid: f947781077d25f142865cf7d089a4af6, type: 2}
-    PositionOffset: {x: 0, y: 28, z: 0}
+  - Projectile: {fileID: 11411810, guid: 4bb86a1ee8e0feb48bbe183fc3d12070, type: 2}
+    PositionOffset: {x: 0, y: 18, z: 0}
     AngleOffset: 0
-  - Projectile: {fileID: 11411810, guid: f947781077d25f142865cf7d089a4af6, type: 2}
-    PositionOffset: {x: 0, y: -28, z: 0}
+  - Projectile: {fileID: 11411810, guid: 4bb86a1ee8e0feb48bbe183fc3d12070, type: 2}
+    PositionOffset: {x: 0, y: -18, z: 0}
     AngleOffset: 0
 --- !u!1001 &100100000
 Prefab:

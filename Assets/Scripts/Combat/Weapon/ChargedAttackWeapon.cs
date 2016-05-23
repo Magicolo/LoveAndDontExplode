@@ -13,45 +13,35 @@ public class ChargedAttackWeapon : SimpleWeapon
 
 	public float MaxChargeTime;
 
-	float lastFire;
-
-
-	public override void Fire()
+	protected override void FireProjectiles()
 	{
-		if (CanFire())
+		GameObject[] bullets = Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
+		float timeWaited = Time.Time - lastFired;
+
+		float timeRatio = timeWaited / MaxChargeTime;
+
+		foreach (var bullet in bullets)
 		{
-			//Nous avons reloader donc on remet les bullets
-			if (currentAmmo == 0)
-				currentAmmo = (int)Ammo.GetRandom();
-
-			currentAmmo--;
-
-			GameObject[] bullets = Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
-
-
-			float timeWaited = Time.Time - lastFire;
-			lastFire = Time.Time;
-
-			float timeRatio = timeWaited / MaxChargeTime;
-
-			foreach (var bullet in bullets)
+			bullet.transform.localScale *= ScaleRange.GetAtT(timeRatio);
+			foreach (var damager in bullet.GetComponents<DamagerBase>())
 			{
-				bullet.transform.localScale *= ScaleRange.GetAtT(timeRatio);
-				foreach (var damager in bullet.GetComponents<DamagerBase>())
-				{
-					damager.DamageToCause.Damage = DamageRange.GetAtT(timeRatio);
-				}
-			}
-
-
-			if (currentAmmo == 0)
-			{
-				t = Time.Time + Cooldown.GetRandom();
-			}
-			else
-			{
-				t = Time.Time + FireRate;
+				damager.DamageToCause.Damage = DamageRange.GetAtT(timeRatio);
 			}
 		}
+	}
+
+	public override float getCoolDownRatio()
+	{
+		if (CanFire())
+			return 1;
+
+		float r = (Time.Time - lastFired) / (t - lastFired);
+		return Mathf.Clamp(r, 0, 1);
+	}
+
+	public override float getAmmoRatio()
+	{
+		float timeWaited = Time.Time - lastFired;
+		return timeWaited / MaxChargeTime;
 	}
 }

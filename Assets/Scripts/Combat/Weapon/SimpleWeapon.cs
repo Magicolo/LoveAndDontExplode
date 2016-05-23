@@ -19,7 +19,7 @@ public class SimpleWeapon : WeaponBase
 	public int currentAmmo;
 
 	int currentMaxAmmo = 1;
-	bool reloading = true;
+	protected bool reloading = true;
 
 	protected float t;
 	protected float lastFired;
@@ -30,7 +30,7 @@ public class SimpleWeapon : WeaponBase
 		currentAmmo = currentMaxAmmo;
 	}
 
-	void Update()
+	protected virtual void Update()
 	{
 		if (reloading)
 		{
@@ -53,11 +53,11 @@ public class SimpleWeapon : WeaponBase
 	{
 		if (CanFire())
 		{
+			FireProjectiles();
 			currentAmmo--;
 
 			lastFired = Time.Time;
 
-			Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
 			if (currentAmmo <= 0)
 			{
 				reloading = true;
@@ -69,6 +69,11 @@ public class SimpleWeapon : WeaponBase
 				t = Time.Time + FireRate;
 			}
 		}
+	}
+
+	protected virtual void FireProjectiles()
+	{
+		Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
 	}
 
 	public override float getCoolDownRatio()

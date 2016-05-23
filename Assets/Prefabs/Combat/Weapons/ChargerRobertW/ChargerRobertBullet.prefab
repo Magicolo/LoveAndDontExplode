@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 111
   RotateSpeed: 5
-  Accelerate: 1
+  Accelerate: 0
 --- !u!114 &11463858
 MonoBehaviour:
   m_ObjectHideFlags: 1
