@@ -12,12 +12,27 @@ GameObject:
   - 114: {fileID: 11440122}
   - 114: {fileID: 11497234}
   - 58: {fileID: 5870094}
-  - 114: {fileID: 11453892}
   - 114: {fileID: 11434364}
-  - 114: {fileID: 11484202}
   m_Layer: 9
   m_Name: ShipGravityBullet
   m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &142118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 493124}
+  - 114: {fileID: 11487274}
+  - 114: {fileID: 11408768}
+  m_Layer: 9
+  m_Name: GravityVelocity
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,6 +64,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438872}
+  - {fileID: 493124}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &438872
@@ -63,6 +79,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 400444}
   m_RootOrder: 0
+--- !u!4 &493124
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 400444}
+  m_RootOrder: 1
 --- !u!50 &5057102
 Rigidbody2D:
   serializedVersion: 2
@@ -94,6 +122,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.5
+--- !u!114 &11408768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76117de951b867b4daa03a0fc9eca090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 11487274}
+  Time: {fileID: 11440122}
+  DeactivateTime: 3
 --- !u!114 &11434364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,12 +165,12 @@ MonoBehaviour:
   time:
     channel: 4
     timeScale: 1
---- !u!114 &11453892
+--- !u!114 &11487274
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129166}
+  m_GameObject: {fileID: 142118}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10c7c26b1e76f3245b938c25988c7561, type: 3}
@@ -148,20 +190,6 @@ MonoBehaviour:
   YAccelerationVelocity:
     min: -4
     max: -4
---- !u!114 &11484202
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 129166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-    channel: 4
-    timeScale: 1
 --- !u!114 &11497234
 MonoBehaviour:
   m_ObjectHideFlags: 1
