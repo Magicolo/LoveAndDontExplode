@@ -20,8 +20,8 @@ public class AccelerationVeloMotionControler : ControllerBase
 	Vector2 velocity;
 	float xa;
 	float ya;
-	float xav;
-	float yav;
+	float xav = 0;
+	float yav = 0;
 
 	public TimeComponent Time;
 

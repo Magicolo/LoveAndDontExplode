@@ -28,7 +28,7 @@ GameObject:
   - 50: {fileID: 5012544}
   - 114: {fileID: 11432074}
   - 114: {fileID: 11483790}
-  - 114: {fileID: 11467210}
+  - 114: {fileID: 11451546}
   m_Layer: 0
   m_Name: PasserBy
   m_TagString: Enemis
@@ -121,7 +121,7 @@ MonoBehaviour:
   time:
     channel: 5
     timeScale: 1
---- !u!114 &11467210
+--- !u!114 &11451546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -129,13 +129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 105336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 893b864043c7692459d5168360aeb328, type: 3}
+  m_Script: {fileID: 11500000, guid: 48e30f5c5cc01b149be431bfd47a6aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Motion: {fileID: 11483790}
-  Frequency: 1
-  Amplitude: 1
-  Offset: 0
 --- !u!114 &11483790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 24
   RotateSpeed: 7
+  Accelerate: 1
 --- !u!198 &19864278
 ParticleSystem:
   m_ObjectHideFlags: 1
