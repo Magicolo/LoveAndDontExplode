@@ -16,6 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &142780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 462854}
+  - 114: {fileID: 11476558}
+  m_Layer: 0
+  m_Name: Player1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &167696
 GameObject:
   m_ObjectHideFlags: 0
@@ -26,7 +42,7 @@ GameObject:
   - 4: {fileID: 473792}
   - 114: {fileID: 11442862}
   m_Layer: 0
-  m_Name: Player1
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,8 +59,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 462854}
   - {fileID: 473792}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &462854
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142780}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 433592}
   m_RootOrder: 0
 --- !u!4 &473792
 Transform:
@@ -58,7 +88,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 433592}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &11406708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Inputs:
+  - {fileID: 11476558}
   - {fileID: 11442862}
 --- !u!114 &11442862
 MonoBehaviour:
@@ -83,14 +114,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b466a3a7574a84aaa65c083930349e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 1
+  Player: 2
   Actions:
   - name: MotionX
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons: []
     KeyboardAxes:
-    - axis: Horizontal
+    - axis: Horizontal2
       threshold: 0.1
     JoystickButtons: []
     JoystickAxes: []
@@ -99,7 +130,7 @@ MonoBehaviour:
     MouseAxes: []
     KeyboardButtons: []
     KeyboardAxes:
-    - axis: Vertical
+    - axis: Vertical2
       threshold: 0.1
     JoystickButtons: []
     JoystickAxes: []
@@ -107,7 +138,7 @@ MonoBehaviour:
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons:
-    - key: 120
+    - key: 111
     KeyboardAxes: []
     JoystickButtons: []
     JoystickAxes: []
@@ -115,7 +146,54 @@ MonoBehaviour:
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons:
-    - key: 122
+    - key: 117
+    KeyboardAxes: []
+    JoystickButtons: []
+    JoystickAxes: []
+--- !u!114 &11476558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b466a3a7574a84aaa65c083930349e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: 1
+  Actions:
+  - name: MotionX
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons: []
+    KeyboardAxes:
+    - axis: Horizontal1
+      threshold: 0.1
+    JoystickButtons: []
+    JoystickAxes: []
+  - name: MotionY
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons: []
+    KeyboardAxes:
+    - axis: Vertical1
+      threshold: 0.1
+    JoystickButtons: []
+    JoystickAxes: []
+  - name: Activate
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons:
+    - key: 101
+    KeyboardAxes: []
+    JoystickButtons: []
+    JoystickAxes: []
+  - name: Fire
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons:
+    - key: 113
     KeyboardAxes: []
     JoystickButtons: []
     JoystickAxes: []

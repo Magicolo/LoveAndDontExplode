@@ -1,73 +1,45 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &121726
+--- !u!1 &118916
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 444266}
-  - 114: {fileID: 11459638}
-  - 114: {fileID: 11435962}
+  - 4: {fileID: 455642}
+  - 114: {fileID: 11409540}
   m_Layer: 0
-  m_Name: GravityThingWeapon
+  m_Name: ChargeRobertProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &444266
+--- !u!4 &455642
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121726}
+  m_GameObject: {fileID: 118916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11435962
+--- !u!114 &11409540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121726}
+  m_GameObject: {fileID: 118916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e12fff0db0d9804bb898a92146ac517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Time: {fileID: 11459638}
-  Projectile: {fileID: 11411810, guid: f947781077d25f142865cf7d089a4af6, type: 2}
-  WeaponRoot: {fileID: 444266}
-  Cooldown:
-    min: 8
-    max: 8
-  Ammo:
-    min: 1
-    max: 1
-  FireRate:
-    min: 0.5
-    max: 1
-  currentAmmo: 0
---- !u!114 &11459638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-    channel: 3
-    timeScale: 1
+  Prefab: {fileID: 140532, guid: fda475fbf3576014bbac05c6f8fd9ec7, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -77,5 +49,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 121726}
+  m_RootGameObject: {fileID: 118916}
   m_IsPrefabParent: 1
