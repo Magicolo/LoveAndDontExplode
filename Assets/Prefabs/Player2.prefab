@@ -31,7 +31,7 @@ GameObject:
   - 114: {fileID: 11433176}
   - 114: {fileID: 11473774}
   m_Layer: 11
-  m_Name: Player
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 10
   RotateSpeed: 10
+  Accelerate: 1
 --- !u!114 &11473774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c38eb6def825544b22ed16fc14026d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 1
+  Player: 2
 --- !u!212 &21285514
 SpriteRenderer:
   m_ObjectHideFlags: 1

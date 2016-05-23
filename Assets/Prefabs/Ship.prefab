@@ -1387,8 +1387,7 @@ PolygonCollider2D:
       - {x: 40.07679, y: 9.784361}
       - {x: 40.032963, y: 26.790699}
       - {x: 52.855415, y: 27.015251}
-      - {x: 54.157024, y: 28.990791}
-      - {x: 61.917522, y: 28.986485}
+      - {x: 61.917522, y: 27.193802}
       - {x: 62.008522, y: 22.002678}
       - {x: 62.85833, y: 22.05108}
       - {x: 62.998833, y: 7.9722853}
@@ -1774,7 +1773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: {fileID: 11435392}
-  Projectile: {fileID: 11461454, guid: 5d96258f814cda74db0575dfad6a3bda, type: 2}
+  Projectile: {fileID: 11461454, guid: 63898d887e0d9804b885f48c377d1d37, type: 2}
   WeaponRoot: {fileID: 453452}
   Cooldown:
     min: 0
