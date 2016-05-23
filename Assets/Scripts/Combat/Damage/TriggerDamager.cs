@@ -11,7 +11,7 @@ public class TriggerDamager : DamagerBase
 	{
 		var damageable = collision.GetComponent<DamageableBase>(HierarchyScopes.Self | HierarchyScopes.Ancestors);
 
-		if (damageable != null)
-			Damage(damageable, DamageToCause);
+		if (damageable != null && Damage(damageable, DamageToCause))
+			SendMessage("OnDamage");
 	}
 }

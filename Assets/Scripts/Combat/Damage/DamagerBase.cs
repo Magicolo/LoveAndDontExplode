@@ -7,6 +7,7 @@ using Pseudo;
 
 public abstract class DamagerBase : PMonoBehaviour
 {
+	[Header("Sends a 'OnDamage' message.")]
 	public DamageInfo DamageToCause;
 
 	public virtual bool Damage(DamageableBase damageable, DamageInfo info)
