@@ -25,6 +25,16 @@ public class LazerWeapon : WeaponBase
 		lastFiring = true;
 	}
 
+	public override float getAmmoRatio()
+	{
+		return 1;
+	}
+
+	public override float getCoolDownRatio()
+	{
+		return 0;
+	}
+
 	void Update()
 	{
 		Line.gameObject.SetActive(isFiring);

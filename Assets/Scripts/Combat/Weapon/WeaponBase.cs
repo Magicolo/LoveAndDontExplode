@@ -12,4 +12,6 @@ public abstract class WeaponBase : MonoBehaviour
 	public abstract bool CanFire();
 
 	public abstract void Fire();
+	public abstract float getCoolDownRatio();
+	public abstract float getAmmoRatio();
 }

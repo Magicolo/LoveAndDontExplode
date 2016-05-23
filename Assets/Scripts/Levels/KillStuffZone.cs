@@ -19,12 +19,12 @@ public class KillStuffZone : PMonoBehaviour
 
 		if (killEVERYTHING || (other.transform.tag == tagTokill))
 		{
-			Debug.Log("meur");
+			//Debug.Log("meur");
 			other.gameObject.Destroy();
 			return;
 		}
-		else
-			Debug.Log("passs" + killEVERYTHING);
+		//else
+		//Debug.Log("passs" + killEVERYTHING);
 
 	}
 }

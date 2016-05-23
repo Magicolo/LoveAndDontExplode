@@ -11,9 +11,17 @@ public class InputTriggerActivator : ActivatorBase
 {
 	Activateable activateable;
 	FreezeMotion freezer;
+	// Hack to ensure that 'Start', thus injection has occurred on all objects of the scene.
+	bool skipHack;
 
 	void Update()
 	{
+		if (!skipHack)
+		{
+			skipHack = true;
+			return;
+		}
+
 		if (Input.GetAction("Activate").GetKeyDown() && activateable != null)
 		{
 			if (!Activate())

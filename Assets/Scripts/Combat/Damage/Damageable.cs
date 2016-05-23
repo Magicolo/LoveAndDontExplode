@@ -14,6 +14,20 @@ public class Damageable : DamageableBase
 	public override bool Alive { get { return Health > 0; } }
 	public float Health { get; set; }
 
+	[Button]
+	public bool damageOne;
+	void DamageOne()
+	{
+		Damage(new DamageInfo { Damage = 1f, Sources = DamageableBy.Sources, Types = DamageableBy.Types });
+	}
+
+	[Button]
+	public bool kill;
+	void Kill()
+	{
+		Damage(new DamageInfo { Damage = Health, Sources = DamageableBy.Sources, Types = DamageableBy.Types });
+	}
+
 	public override bool Damage(DamageInfo info)
 	{
 		// If already dead, skip.

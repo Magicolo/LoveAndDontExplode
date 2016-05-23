@@ -22,7 +22,7 @@ public class ChargedAttackWeapon : SimpleWeapon
 		{
 			//Nous avons reloader donc on remet les bullets
 			if (currentAmmo == 0)
-				currentAmmo = Ammo.GetRandom();
+				currentAmmo = (int)Ammo.GetRandom();
 
 			currentAmmo--;
 
@@ -46,11 +46,11 @@ public class ChargedAttackWeapon : SimpleWeapon
 
 			if (currentAmmo == 0)
 			{
-				t = Time.Time + Cooldown.GetRandom() + FireRate.GetRandom();
+				t = Time.Time + Cooldown.GetRandom();
 			}
 			else
 			{
-				t = Time.Time + FireRate.GetRandom();
+				t = Time.Time + FireRate;
 			}
 		}
 	}

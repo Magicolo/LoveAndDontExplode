@@ -13,12 +13,36 @@ public class SimpleWeapon : WeaponBase
 
 	public MinMax Cooldown;
 	public MinMax Ammo = new MinMax(1, 1);
-	public MinMax FireRate = new MinMax(0.5f, 1);
+	public float FireRate = 0.5f;
 
 	[Disable]
-	public float currentAmmo;
+	public int currentAmmo;
+
+	int currentMaxAmmo = 1;
+	bool reloading = true;
 
 	protected float t;
+	protected float lastFired;
+
+	void Start()
+	{
+		currentMaxAmmo = (int)Ammo.GetRandom();
+		currentAmmo = currentMaxAmmo;
+	}
+
+	void Update()
+	{
+		if (reloading)
+		{
+			if (CanFire())
+			{
+				reloading = false;
+				currentAmmo = currentMaxAmmo;
+			}
+			else
+				currentAmmo = (int)(currentMaxAmmo * getCoolDownRatio());
+		}
+	}
 
 	public override bool CanFire()
 	{
@@ -29,21 +53,35 @@ public class SimpleWeapon : WeaponBase
 	{
 		if (CanFire())
 		{
-			//Nous avons reloader donc on remet les bullets
-			if (currentAmmo == 0)
-				currentAmmo = Ammo.GetRandom();
-
 			currentAmmo--;
 
+			lastFired = Time.Time;
+
 			Projectile.Fire(WeaponRoot.position, WeaponRoot.rotation.eulerAngles.z);
-			if (currentAmmo == 0)
+			if (currentAmmo <= 0)
 			{
-				t = Time.Time + Cooldown.GetRandom() + FireRate.GetRandom();
+				reloading = true;
+				currentMaxAmmo = (int)Ammo.GetRandom();
+				t = Time.Time + Cooldown.GetRandom() + FireRate;
 			}
 			else
 			{
-				t = Time.Time + FireRate.GetRandom();
+				t = Time.Time + FireRate;
 			}
 		}
+	}
+
+	public override float getCoolDownRatio()
+	{
+		if (CanFire())
+			return 1;
+
+		float r = (Time.Time - lastFired) / (t - lastFired);
+		return Mathf.Clamp(r, 0, 1);
+	}
+
+	public override float getAmmoRatio()
+	{
+		return (float)(currentAmmo) / (float)currentMaxAmmo;
 	}
 }

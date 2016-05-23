@@ -9,12 +9,13 @@ public class ColorizeOnDamaged : PMonoBehaviour
 {
 	public Color NormalColor = Color.white;
 	public Color DamagedColor = Color.red;
+	public float FadeSpeed = 5f;
 	public SpriteRenderer Renderer;
 	public TimeComponent Time;
 
 	void Update()
 	{
-		Renderer.FadeTowards(NormalColor, Time.DeltaTime);
+		Renderer.color = Renderer.color.Lerp(NormalColor, Time.DeltaTime * FadeSpeed, Channels.RGB);
 	}
 
 	void OnDamaged()
