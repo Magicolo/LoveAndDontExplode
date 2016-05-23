@@ -12,6 +12,5 @@ public class StraightMotionControler : ControllerBase
 	void FixedUpdate()
 	{
 		Motion.Move(transform.right);
-		Motion.RotateTo(0);
 	}
 }
