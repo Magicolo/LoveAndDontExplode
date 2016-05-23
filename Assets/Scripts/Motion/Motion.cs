@@ -11,6 +11,7 @@ public class Motion : MotionBase
 {
 	public float MoveSpeed = 5f;
 	public float RotateSpeed = 5f;
+	public bool Accelerate = true;
 
 	Rigidbody2D body;
 	Rigidbody2D inherit;
@@ -47,49 +48,42 @@ public class Motion : MotionBase
 			body.velocity *= 1f - Mathf.Clamp01(body.drag / 100f);
 	}
 
-	public override void Move(Vector2 motion, bool instant = false)
+	public override void Move(Vector2 motion)
 	{
 		if (GetComponent<FreezeMotion>() == null)
 		{
-			if (instant)
-				body.Translate(motion);
-			else if (inherit == null)
-				body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
+			if (Accelerate)
+			{
+				if (inherit == null)
+					body.AccelerateTowards(motion * MoveSpeed, time.FixedDeltaTime);
+				else
+					velocity += motion * MoveSpeed * time.FixedDeltaTime;
+			}
 			else
-				velocity += motion * MoveSpeed * time.FixedDeltaTime;
+			{
+				if (inherit == null)
+					body.SetVelocity(motion * MoveSpeed);
+				else
+					velocity = motion * MoveSpeed * time.FixedDeltaTime;
+			}
 		}
 	}
 
-	public override void MoveTo(Vector2 motion, bool instant = false)
+	public override void MoveTo(Vector2 motion)
 	{
 		if (GetComponent<FreezeMotion>() == null)
-		{
-			if (instant)
-				body.SetPosition(motion);
-			else
-				body.TranslateTowards(motion, time.FixedDeltaTime * MoveSpeed);
-		}
+			body.TranslateTowards(motion, time.FixedDeltaTime * MoveSpeed);
 	}
 
-	public override void Rotate(float angle, bool instant = false)
+	public override void Rotate(float angle)
 	{
 		if (GetComponent<FreezeMotion>() == null)
-		{
-			if (instant)
-				body.Rotate(angle);
-			else
-				body.Rotate(angle * RotateSpeed * time.FixedDeltaTime);
-		}
+			body.Rotate(angle * RotateSpeed * time.FixedDeltaTime);
 	}
 
-	public override void RotateTo(float angle, bool instant = false)
+	public override void RotateTo(float angle)
 	{
 		if (GetComponent<FreezeMotion>() == null)
-		{
-			if (instant)
-				body.SetEulerAngle(angle);
-			else
-				body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
-		}
+			body.RotateTowards(angle, time.FixedDeltaTime * RotateSpeed);
 	}
 }

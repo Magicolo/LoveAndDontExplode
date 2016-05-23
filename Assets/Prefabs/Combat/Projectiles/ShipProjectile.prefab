@@ -1,73 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &121726
+--- !u!1 &194650
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 444266}
-  - 114: {fileID: 11459638}
-  - 114: {fileID: 11435962}
+  - 4: {fileID: 434306}
+  - 114: {fileID: 11439978}
+  - 114: {fileID: 11479252}
   m_Layer: 0
-  m_Name: GravityThingWeapon
+  m_Name: ShipProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &444266
+--- !u!4 &434306
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121726}
+  m_GameObject: {fileID: 194650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 60, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11435962
+--- !u!114 &11439978
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121726}
+  m_GameObject: {fileID: 194650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
+  m_Script: {fileID: 11500000, guid: ab97378385b2b764294b91e9706cc591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Time: {fileID: 11459638}
-  Projectile: {fileID: 11411810, guid: f947781077d25f142865cf7d089a4af6, type: 2}
-  WeaponRoot: {fileID: 444266}
-  Cooldown:
-    min: 8
-    max: 8
-  Ammo:
-    min: 1
-    max: 1
-  FireRate:
-    min: 0.5
-    max: 1
-  currentAmmo: 0
---- !u!114 &11459638
+  Formation: {fileID: 11479252}
+  Prefab: {fileID: 140362, guid: cb8485627adf1ba449b9ce19f00f8775, type: 2}
+  NbSpawn: 3
+  RotateTowardFormation: 1
+--- !u!114 &11479252
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121726}
+  m_GameObject: {fileID: 194650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
+  m_Script: {fileID: 11500000, guid: daa193b999cd02c409a8ec3b22d216d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time:
-    channel: 3
-    timeScale: 1
+  Radius: 1
+  Spread: 10
+  AngleOffset: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -77,5 +68,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 121726}
+  m_RootGameObject: {fileID: 194650}
   m_IsPrefabParent: 1

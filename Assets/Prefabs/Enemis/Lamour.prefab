@@ -25,7 +25,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448004}
-  - 114: {fileID: 11422138}
   - 114: {fileID: 11456970}
   m_Layer: 0
   m_Name: ShooterWeaponDown
@@ -62,7 +61,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 481474}
-  - 114: {fileID: 11405508}
   - 114: {fileID: 11484800}
   m_Layer: 0
   m_Name: ShooterWeaponUp
@@ -96,7 +94,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 1
@@ -109,7 +106,6 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 0
@@ -122,7 +118,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -0.5, y: -7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 2
@@ -135,7 +130,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -300, y: -86.1, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 414924}
   - {fileID: 405102}
@@ -152,7 +146,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -0.5, y: 6.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 459678}
   m_RootOrder: 3
@@ -173,34 +166,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &11405508
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-    channel: 0
-    timeScale: 1
---- !u!114 &11422138
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c5d98cb8fbf99648880738ecb7452a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time:
-    channel: 0
-    timeScale: 1
 --- !u!114 &11440642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -248,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Time: {fileID: 11477186}
   Projectile: {fileID: 11498912, guid: d570dba21335deb4c8c885d4d80d14d2, type: 2}
   WeaponRoot: {fileID: 448004}
   Cooldown:
@@ -298,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12652cb269c75b4a80a22fe2d658866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Time: {fileID: 11477186}
   Projectile: {fileID: 11498912, guid: d570dba21335deb4c8c885d4d80d14d2, type: 2}
   WeaponRoot: {fileID: 481474}
   Cooldown:
