@@ -14,9 +14,27 @@ GameObject:
   - 114: {fileID: 11427118}
   - 114: {fileID: 11443534}
   - 114: {fileID: 11491198}
-  m_Layer: 0
+  - 114: {fileID: 11489648}
+  - 114: {fileID: 11443204}
+  m_Layer: 9
   m_Name: Targeted Loner Biker
   m_TagString: Enemis
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &130690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 410546}
+  - 58: {fileID: 5894900}
+  m_Layer: 9
+  m_Name: Collider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +48,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 436474}
   - 212: {fileID: 21255498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +65,7 @@ GameObject:
   - 4: {fileID: 401926}
   - 198: {fileID: 19813954}
   - 199: {fileID: 19929196}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +81,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 461630}
   - 114: {fileID: 11416100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MoveTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +98,7 @@ GameObject:
   - 4: {fileID: 493730}
   - 114: {fileID: 11468868}
   - 114: {fileID: 11406284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShooterWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +114,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 417012}
   - 114: {fileID: 11457850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,9 +130,23 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 0
+--- !u!4 &410546
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130690}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 419998}
+  m_RootOrder: 5
 --- !u!4 &417012
 Transform:
   m_ObjectHideFlags: 1
@@ -124,6 +156,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 4
@@ -134,14 +167,16 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -501.24, y: -86.1, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 401926}
   - {fileID: 436474}
   - {fileID: 493730}
   - {fileID: 461630}
   - {fileID: 417012}
+  - {fileID: 410546}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &436474
@@ -153,6 +188,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 1
@@ -165,6 +201,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 3
@@ -177,6 +214,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 419998}
   m_RootOrder: 2
@@ -197,6 +235,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5894900
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130690}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!114 &11406284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -238,6 +290,22 @@ MonoBehaviour:
     max: 0.95
   Weapons:
   - {fileID: 11468868}
+--- !u!114 &11443204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf60a87a25e2ac04e8d9901a1cd11429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  DamagedColor: {r: 1, g: 0, b: 0, a: 1}
+  FadeSpeed: 5
+  Renderer: {fileID: 21255498}
+  Time: {fileID: 11468282}
 --- !u!114 &11443534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -315,6 +383,24 @@ MonoBehaviour:
     max: 1
   FireRate: NaN
   currentAmmo: 0
+--- !u!114 &11489648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageableBy:
+    Damage: 0
+    Sources: 1
+    Types: 7
+  MaxHealth: 5
+  damageOne: 0
+  kill: 0
 --- !u!114 &11491198
 MonoBehaviour:
   m_ObjectHideFlags: 1

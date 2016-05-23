@@ -14,7 +14,7 @@ public class Lane : PMonoBehaviour
 	void Update()
 	{
 		var offset = Renderer.material.mainTextureOffset;
-		offset.x -= AnimationSpeed * Time.DeltaTime;
+		offset.x += AnimationSpeed * Time.DeltaTime;
 		offset.x = offset.x.Wrap(0f, 1f);
 		Renderer.material.mainTextureOffset = offset;
 	}

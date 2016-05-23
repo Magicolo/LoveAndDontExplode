@@ -9,7 +9,8 @@ using Pseudo;
 public enum DamageSources : byte
 {
 	Player = 1 << 0,
-	Enemy = 1 << 1
+	Enemy = 1 << 1,
+	Dummy = 1 << 7
 }
 
 [Flags]
@@ -17,7 +18,8 @@ public enum DamageTypes : byte
 {
 	Bullet = 1 << 0,
 	Lazer = 1 << 1,
-	Leap = 1 << 2
+	Leap = 1 << 2,
+	Dummy = 1 << 7
 }
 
 [Serializable]

@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &121752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 477734}
+  - 58: {fileID: 5865694}
+  m_Layer: 9
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &141430
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400076}
   - 114: {fileID: 11411018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FireTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 464884}
   - 212: {fileID: 21235386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +61,9 @@ GameObject:
   - 114: {fileID: 11499448}
   - 114: {fileID: 11421324}
   - 114: {fileID: 11425360}
-  m_Layer: 0
+  - 114: {fileID: 11460712}
+  - 114: {fileID: 11465570}
+  m_Layer: 9
   m_Name: Grouped Biker
   m_TagString: Enemis
   m_Icon: {fileID: 0}
@@ -62,7 +80,7 @@ GameObject:
   - 4: {fileID: 486292}
   - 114: {fileID: 11423476}
   - 114: {fileID: 11432886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShooterWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +96,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 474584}
   - 114: {fileID: 11467650}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MoveTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +113,7 @@ GameObject:
   - 4: {fileID: 441812}
   - 198: {fileID: 19851086}
   - 199: {fileID: 19996398}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +129,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 4
@@ -123,6 +142,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.94, y: -0.39, z: 6}
   m_LocalScale: {x: 2, y: 3, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 0
@@ -135,6 +155,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 1
@@ -147,9 +168,23 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 3
+--- !u!4 &477734
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 478186}
+  m_RootOrder: 5
 --- !u!4 &478186
 Transform:
   m_ObjectHideFlags: 1
@@ -157,14 +192,16 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -501.24, y: -86.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 441812}
   - {fileID: 464884}
   - {fileID: 486292}
   - {fileID: 474584}
   - {fileID: 400076}
+  - {fileID: 477734}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &486292
@@ -176,6 +213,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 478186}
   m_RootOrder: 2
@@ -196,6 +234,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5865694
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121752}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
 --- !u!114 &11411018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -287,6 +339,40 @@ MonoBehaviour:
   time:
     channel: 0
     timeScale: 1
+--- !u!114 &11460712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageableBy:
+    Damage: 0
+    Sources: 1
+    Types: 7
+  MaxHealth: 5
+  damageOne: 0
+  kill: 0
+--- !u!114 &11465570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf60a87a25e2ac04e8d9901a1cd11429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  DamagedColor: {r: 1, g: 0, b: 0, a: 1}
+  FadeSpeed: 5
+  Renderer: {fileID: 21235386}
+  Time: {fileID: 11445828}
 --- !u!114 &11467650
 MonoBehaviour:
   m_ObjectHideFlags: 1
