@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Inputs:
   - {fileID: 11476558}
+  - {fileID: 11442862}
 --- !u!114 &11442862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,14 +114,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78b466a3a7574a84aaa65c083930349e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 1
+  Player: 2
   Actions:
   - name: MotionX
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons: []
     KeyboardAxes:
-    - axis: Horizontal
+    - axis: Horizontal2
       threshold: 0.1
     JoystickButtons: []
     JoystickAxes: []
@@ -129,7 +130,7 @@ MonoBehaviour:
     MouseAxes: []
     KeyboardButtons: []
     KeyboardAxes:
-    - axis: Vertical
+    - axis: Vertical2
       threshold: 0.1
     JoystickButtons: []
     JoystickAxes: []
@@ -137,7 +138,7 @@ MonoBehaviour:
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons:
-    - key: 120
+    - key: 111
     KeyboardAxes: []
     JoystickButtons: []
     JoystickAxes: []
@@ -145,7 +146,7 @@ MonoBehaviour:
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons:
-    - key: 122
+    - key: 117
     KeyboardAxes: []
     JoystickButtons: []
     JoystickAxes: []
@@ -167,7 +168,7 @@ MonoBehaviour:
     MouseAxes: []
     KeyboardButtons: []
     KeyboardAxes:
-    - axis: Horizontal
+    - axis: Horizontal1
       threshold: 0.1
     JoystickButtons: []
     JoystickAxes: []
@@ -176,7 +177,7 @@ MonoBehaviour:
     MouseAxes: []
     KeyboardButtons: []
     KeyboardAxes:
-    - axis: Vertical
+    - axis: Vertical1
       threshold: 0.1
     JoystickButtons: []
     JoystickAxes: []
@@ -184,7 +185,7 @@ MonoBehaviour:
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons:
-    - key: 120
+    - key: 101
     KeyboardAxes: []
     JoystickButtons: []
     JoystickAxes: []
@@ -192,7 +193,7 @@ MonoBehaviour:
     MouseButtons: []
     MouseAxes: []
     KeyboardButtons:
-    - key: 122
+    - key: 113
     KeyboardAxes: []
     JoystickButtons: []
     JoystickAxes: []
