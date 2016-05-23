@@ -176,6 +176,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11422144, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
+      propertyPath: Ships.Array.data[0]
+      value: 
+      objectReference: {fileID: 1910286850}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
   m_IsPrefabParent: 0
@@ -1062,3 +1066,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 150056, guid: ceef7ca83b2d9794795dda24b5c7f06b, type: 2}
+--- !u!114 &1910286850 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11469788, guid: c438f404924017e4485d7cb6f6e6129b,
+    type: 2}
+  m_PrefabInternal: {fileID: 687404434}
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
