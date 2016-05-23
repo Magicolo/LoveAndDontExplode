@@ -233,14 +233,6 @@ Prefab:
       propertyPath: StartLane
       value: 
       objectReference: {fileID: 781117952}
-    - target: {fileID: 11411408, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: AngleRange.max
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11405718, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: RotationSpeed
-      value: 90
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_IsPrefabParent: 0
