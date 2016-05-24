@@ -32,6 +32,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &152694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 403650}
+  - 114: {fileID: 11442614}
+  m_Layer: 0
+  m_Name: Player2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &167696
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,12 +58,25 @@ GameObject:
   - 4: {fileID: 473792}
   - 114: {fileID: 11442862}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Player3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &403650
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 152694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 433592}
+  m_RootOrder: 1
 --- !u!4 &433592
 Transform:
   m_ObjectHideFlags: 1
@@ -60,6 +89,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 462854}
+  - {fileID: 403650}
   - {fileID: 473792}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,7 +118,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 433592}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &11406708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,13 +132,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Inputs:
   - {fileID: 11476558}
-  - {fileID: 11442862}
---- !u!114 &11442862
+  - {fileID: 11442614}
+--- !u!114 &11442614
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167696}
+  m_GameObject: {fileID: 152694}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78b466a3a7574a84aaa65c083930349e, type: 3}
@@ -149,6 +179,63 @@ MonoBehaviour:
     - key: 117
     KeyboardAxes: []
     JoystickButtons: []
+    JoystickAxes: []
+--- !u!114 &11442862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b466a3a7574a84aaa65c083930349e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: 3
+  Actions:
+  - name: MotionX
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons: []
+    KeyboardAxes: []
+    JoystickButtons: []
+    JoystickAxes:
+    - joystick: 0
+      axis: 0
+      threshold: 0.1
+    - joystick: 0
+      axis: 5
+      threshold: 0.1
+  - name: MotionY
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons: []
+    KeyboardAxes: []
+    JoystickButtons: []
+    JoystickAxes:
+    - joystick: 0
+      axis: 1
+      threshold: 0.1
+    - joystick: 0
+      axis: 6
+      threshold: 0.1
+  - name: Activate
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons: []
+    KeyboardAxes: []
+    JoystickButtons:
+    - joystick: 0
+      button: 2
+    JoystickAxes: []
+  - name: Fire
+    MouseButtons: []
+    MouseAxes: []
+    KeyboardButtons: []
+    KeyboardAxes: []
+    JoystickButtons:
+    - joystick: 0
+      button: 0
     JoystickAxes: []
 --- !u!114 &11476558
 MonoBehaviour:
