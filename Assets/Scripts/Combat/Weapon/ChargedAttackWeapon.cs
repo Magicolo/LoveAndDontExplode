@@ -19,6 +19,7 @@ public class ChargedAttackWeapon : SimpleWeapon
 		float timeWaited = Time.Time - lastFired;
 
 		float timeRatio = timeWaited / MaxChargeTime;
+		timeRatio = timeRatio * timeRatio;
 
 		foreach (var bullet in bullets)
 		{

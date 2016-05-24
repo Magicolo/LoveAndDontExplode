@@ -64,6 +64,7 @@ GameObject:
   - 114: {fileID: 11444288}
   - 114: {fileID: 11441888}
   - 114: {fileID: 11416500}
+  - 114: {fileID: 11457044}
   m_Layer: 9
   m_Name: Lamour
   m_TagString: Enemis
@@ -303,6 +304,18 @@ MonoBehaviour:
     max: 26
   FireRate: 0.05
   currentAmmo: 0
+--- !u!114 &11457044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801c4b8cd0901d4a94ef08294f8ae28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDestroy: {fileID: 181084}
 --- !u!114 &11465644
 MonoBehaviour:
   m_ObjectHideFlags: 1

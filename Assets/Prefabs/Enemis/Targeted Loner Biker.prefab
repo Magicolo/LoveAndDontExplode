@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11491198}
   - 114: {fileID: 11489648}
   - 114: {fileID: 11443204}
+  - 114: {fileID: 11470178}
   m_Layer: 9
   m_Name: Targeted Loner Biker
   m_TagString: Enemis
@@ -376,6 +377,18 @@ MonoBehaviour:
     max: 2
   FireRate: 0.7
   currentAmmo: 0
+--- !u!114 &11470178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 103016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801c4b8cd0901d4a94ef08294f8ae28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDestroy: {fileID: 103016}
 --- !u!114 &11489648
 MonoBehaviour:
   m_ObjectHideFlags: 1

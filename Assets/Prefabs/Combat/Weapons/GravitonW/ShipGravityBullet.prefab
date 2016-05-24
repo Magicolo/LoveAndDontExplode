@@ -13,6 +13,8 @@ GameObject:
   - 114: {fileID: 11497234}
   - 58: {fileID: 5870094}
   - 114: {fileID: 11434364}
+  - 114: {fileID: 11485892}
+  - 114: {fileID: 11418418}
   m_Layer: 9
   m_Name: ShipGravityBullet
   m_TagString: Player
@@ -196,6 +198,18 @@ MonoBehaviour:
   Controller: {fileID: 11487274}
   Time: {fileID: 11440122}
   DeactivateTime: 6
+--- !u!114 &11418418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801c4b8cd0901d4a94ef08294f8ae28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDestroy: {fileID: 129166}
 --- !u!114 &11428758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,6 +282,17 @@ MonoBehaviour:
   Controller: {fileID: 11437076}
   Time: {fileID: 11440122}
   DeactivateTime: 4
+--- !u!114 &11485892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 129166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6959b9ad85b1748a1e1ff481a15876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11487274
 MonoBehaviour:
   m_ObjectHideFlags: 1

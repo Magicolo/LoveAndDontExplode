@@ -53,6 +53,8 @@ GameObject:
   - 114: {fileID: 11468806}
   - 58: {fileID: 5835260}
   - 114: {fileID: 11471182}
+  - 114: {fileID: 11451348}
+  - 114: {fileID: 11491254}
   m_Layer: 9
   m_Name: CrapAsteoride
   m_TagString: Enemis
@@ -193,6 +195,24 @@ MonoBehaviour:
   time:
     channel: 5
     timeScale: 1
+--- !u!114 &11451348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageableBy:
+    Damage: 0
+    Sources: 3
+    Types: 7
+  MaxHealth: 1
+  damageOne: 0
+  kill: 0
 --- !u!114 &11463976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,6 +306,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motion: {fileID: 11418960}
   Direction: 6
+--- !u!114 &11491254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801c4b8cd0901d4a94ef08294f8ae28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDestroy: {fileID: 184134}
 --- !u!198 &19800276
 ParticleSystem:
   m_ObjectHideFlags: 1

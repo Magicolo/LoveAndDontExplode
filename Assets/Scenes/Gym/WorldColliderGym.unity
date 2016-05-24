@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 76114230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -350}
+  m_LocalPosition: {x: 0, y: 0, z: -222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -228,10 +228,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11477804, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: StartLane
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_IsPrefabParent: 0
@@ -282,6 +278,14 @@ Prefab:
       propertyPath: Ships.Array.data[0]
       value: 
       objectReference: {fileID: 1397481210}
+    - target: {fileID: 403428, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 489328, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76ad51dcb48659542ae9928a334925bb, type: 2}
   m_IsPrefabParent: 0
@@ -348,7 +352,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471384, guid: c5179ee3a94b9a6439014a8dc4b9ef7e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 25.01
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 471384, guid: c5179ee3a94b9a6439014a8dc4b9ef7e, type: 2}
       propertyPath: m_LocalPosition.z
