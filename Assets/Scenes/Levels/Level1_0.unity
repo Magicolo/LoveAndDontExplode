@@ -449,36 +449,20 @@ Prefab:
       value: 
       objectReference: {fileID: 781117952}
     - target: {fileID: 11426182, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+      propertyPath: Ammo.min
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426182, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+      propertyPath: Ammo.max
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426182, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
       propertyPath: Cooldown.min
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11426182, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
       propertyPath: Cooldown.max
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 11417896, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: RotationSpeed
-      value: 155
-      objectReference: {fileID: 0}
-    - target: {fileID: 11405718, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: RotationSpeed
-      value: 155
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474668, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: Ammo.min
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474668, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: Ammo.max
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474668, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: Cooldown.min
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 11474668, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: Cooldown.max
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
