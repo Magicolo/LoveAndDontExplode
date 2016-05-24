@@ -137,6 +137,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1e1f3f9e747e5428f6042ba5450592, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &359618105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 192946, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 359618106}
+  - 114: {fileID: 359618107}
+  m_Layer: 0
+  m_Name: Player1Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 8467475693731670952, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &359618106
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 420436, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359618105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1317100255}
+  m_RootOrder: 1
+--- !u!114 &359618107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11456214, guid: c438f404924017e4485d7cb6f6e6129b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359618105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7332004777d2ebb488a4222a8779ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 150056, guid: ceef7ca83b2d9794795dda24b5c7f06b, type: 2}
 --- !u!1001 &487023711
 Prefab:
   m_ObjectHideFlags: 0
@@ -401,6 +443,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!4 &1317100255 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 446624, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
+  m_PrefabInternal: {fileID: 687404434}
 --- !u!114 &1910286850 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11469788, guid: c438f404924017e4485d7cb6f6e6129b,
