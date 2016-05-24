@@ -12421,7 +12421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time:
     channel: 3
-    timeScale: 1
+    timeScale: 0.8
 --- !u!4 &2080387419
 Transform:
   m_ObjectHideFlags: 0
