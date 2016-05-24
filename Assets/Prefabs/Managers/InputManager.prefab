@@ -133,6 +133,7 @@ MonoBehaviour:
   Inputs:
   - {fileID: 11476558}
   - {fileID: 11442614}
+  - {fileID: 11442862}
 --- !u!114 &11442614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,7 +227,7 @@ MonoBehaviour:
     KeyboardAxes: []
     JoystickButtons:
     - joystick: 0
-      button: 2
+      button: 0
     JoystickAxes: []
   - name: Fire
     MouseButtons: []
@@ -235,7 +236,7 @@ MonoBehaviour:
     KeyboardAxes: []
     JoystickButtons:
     - joystick: 0
-      button: 0
+      button: 2
     JoystickAxes: []
 --- !u!114 &11476558
 MonoBehaviour:
