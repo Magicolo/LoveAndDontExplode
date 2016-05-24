@@ -30,7 +30,6 @@ public class Activateable : PMonoBehaviour
 		this.owner = owner;
 		UpdateSelector();
 		SendMessage("OnActivated", owner);
-		PDebug.LogMethod(this, this.owner, owner, inRangeCounter);
 
 		return true;
 	}
@@ -42,7 +41,6 @@ public class Activateable : PMonoBehaviour
 			this.owner = null;
 			UpdateSelector();
 			SendMessage("OnDeactivated", owner);
-			PDebug.LogMethod(this, this.owner, owner, inRangeCounter);
 
 			return true;
 		}
@@ -54,14 +52,12 @@ public class Activateable : PMonoBehaviour
 	{
 		inRangeCounter++;
 		UpdateSelector();
-		PDebug.LogMethod(this, this.owner, owner, inRangeCounter);
 	}
 
 	public void ExitRange(ActivatorBase owner)
 	{
 		inRangeCounter--;
 		UpdateSelector();
-		PDebug.LogMethod(this, this.owner, owner, inRangeCounter);
 	}
 
 	void UpdateSelector()
