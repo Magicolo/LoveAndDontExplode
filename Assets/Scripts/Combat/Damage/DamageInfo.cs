@@ -19,6 +19,7 @@ public enum DamageTypes : byte
 	Bullet = 1 << 0,
 	Lazer = 1 << 1,
 	Leap = 1 << 2,
+	Debris = 1 << 3,
 	Dummy = 1 << 7
 }
 
