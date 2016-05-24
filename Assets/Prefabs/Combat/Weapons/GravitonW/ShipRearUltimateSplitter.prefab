@@ -41,10 +41,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectiles:
   - Projectile: {fileID: 11411810, guid: 4bb86a1ee8e0feb48bbe183fc3d12070, type: 2}
-    PositionOffset: {x: 0, y: 18, z: 0}
+    PositionOffset: {x: 0, y: 16, z: 0}
     AngleOffset: 0
   - Projectile: {fileID: 11411810, guid: 4bb86a1ee8e0feb48bbe183fc3d12070, type: 2}
-    PositionOffset: {x: 0, y: -18, z: 0}
+    PositionOffset: {x: 0, y: -16, z: 0}
     AngleOffset: 0
 --- !u!1001 &100100000
 Prefab:
