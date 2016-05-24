@@ -33,6 +33,8 @@ GameObject:
   - 114: {fileID: 11423582}
   - 114: {fileID: 11449552}
   - 114: {fileID: 11471148}
+  - 114: {fileID: 11444174}
+  - 114: {fileID: 11463246}
   m_Layer: 9
   m_Name: ShipBullet
   m_TagString: Bullet
@@ -108,6 +110,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToDestroy: {fileID: 140362}
+--- !u!114 &11444174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f8244e1e454f6488ce42e8f94f130d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageableBy:
+    Damage: 0
+    Sources: 2
+    Types: 15
+  MaxHealth: 1
+  damageOne: 0
+  kill: 0
 --- !u!114 &11449552
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,6 +151,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Motion: {fileID: 11476150}
+--- !u!114 &11463246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5801c4b8cd0901d4a94ef08294f8ae28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToDestroy: {fileID: 140362}
 --- !u!114 &11471148
 MonoBehaviour:
   m_ObjectHideFlags: 1

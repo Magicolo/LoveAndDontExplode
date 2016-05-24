@@ -448,14 +448,6 @@ Prefab:
       propertyPath: StartLane
       value: 
       objectReference: {fileID: 781117952}
-    - target: {fileID: 450960, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -25.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 450960, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 13.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c438f404924017e4485d7cb6f6e6129b, type: 2}
   m_IsPrefabParent: 0

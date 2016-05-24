@@ -14,8 +14,6 @@ GameObject:
   - 58: {fileID: 5879594}
   - 114: {fileID: 11479954}
   - 114: {fileID: 11406738}
-  - 114: {fileID: 11483882}
-  - 114: {fileID: 11425496}
   m_Layer: 9
   m_Name: ChargerRobertBullet
   m_TagString: Bullet
@@ -48,7 +46,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 483822}
   m_RootOrder: 0
@@ -61,7 +58,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 453324}
   m_Father: {fileID: 0}
@@ -123,18 +119,6 @@ MonoBehaviour:
   MoveSpeed: 111
   RotateSpeed: 5
   Accelerate: 0
---- !u!114 &11425496
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5801c4b8cd0901d4a94ef08294f8ae28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ToDestroy: {fileID: 140532}
 --- !u!114 &11463858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,17 +148,6 @@ MonoBehaviour:
     Damage: 9
     Sources: 1
     Types: 1
---- !u!114 &11483882
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 140532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c6959b9ad85b1748a1e1ff481a15876, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21236936
 SpriteRenderer:
   m_ObjectHideFlags: 1
